@@ -6,7 +6,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>si'se - 整体院経営ダッシュボード</title>
+    <title>Dear - 整体院経営ダッシュボード</title>
 
     <!-- Google Fonts (非ブロッキング) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,14 +38,14 @@
     <!-- html2canvas (for Treatment Report screenshot) -->
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 
-    <!-- Custom Config for Tailwind (si'se Theme - Enhanced) -->
+    <!-- Custom Config for Tailwind (Dear Theme - Enhanced) -->
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
-                        sise: {
+                        dear: {
                             50: '#f0faf4',
                             100: '#dbf2e3',
                             200: '#b9e5ca',
@@ -221,7 +221,7 @@
         .dark .text-slate-700 { color: #cbd5e1 !important; }
         .dark .text-slate-600 { color: #94a3b8 !important; }
         .dark .border-slate-200 { border-color: #1e3a2c !important; }
-        .dark .border-sise-200 { border-color: #1d6641 !important; }
+        .dark .border-dear-200 { border-color: #1d6641 !important; }
         .dark .glass-panel { background: rgba(18,35,27,0.9); border-color: rgba(51,160,101,0.15); }
         .dark .glass-card { background: rgba(18,35,27,0.7); border-color: rgba(51,160,101,0.12); }
         /* Dark mode: form inputs */
@@ -244,7 +244,7 @@
         .dark .bg-orange-50, .dark .bg-orange-100 { background-color: rgba(249,115,22,0.12) !important; }
         .dark .bg-purple-50, .dark .bg-purple-100 { background-color: rgba(168,85,247,0.12) !important; }
         .dark .bg-violet-50, .dark .bg-violet-100, .dark .bg-violet-50\/50, .dark .bg-violet-50\/40 { background-color: rgba(139,92,246,0.12) !important; }
-        .dark .bg-sise-50 { background-color: rgba(51,160,101,0.08) !important; }
+        .dark .bg-dear-50 { background-color: rgba(51,160,101,0.08) !important; }
         .dark .bg-slate-100 { background-color: rgba(148,163,184,0.08) !important; }
         /* Dark mode: chart tooltip */
         .dark .recharts-tooltip-wrapper .recharts-default-tooltip {
@@ -899,14 +899,14 @@
                     <div style="position:absolute;inset:-10px;border-radius:50%;border:2px solid rgba(51,160,101,0.15);animation:logo-ring-pulse 2s ease-in-out infinite;"></div>
                     <!-- Logo image with fallback -->
                     <img
-                        src="./images/logo.png"
-                        alt="si'se logo"
+                        src="./images/logo.svg"
+                        alt="Dear logo"
                         style="width:120px;height:120px;object-fit:contain;border-radius:28px;animation:logo-float 3s ease-in-out infinite;filter:drop-shadow(0 20px 40px rgba(51,160,101,0.3));"
                         onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
                     />
                     <!-- Fallback: text logo (shown if image fails to load) -->
                     <div style="display:none;width:120px;height:120px;background:linear-gradient(135deg,#33a065 0%,#238050 60%,#55b87f 100%);border-radius:28px;align-items:center;justify-content:center;box-shadow:0 20px 60px -12px rgba(51,160,101,0.45),0 0 0 1px rgba(255,255,255,0.1) inset;animation:logo-float 3s ease-in-out infinite;">
-                        <span style="color:white;font-family:'Noto Sans JP',sans-serif;font-weight:800;font-size:36px;letter-spacing:0.02em;text-shadow:0 2px 8px rgba(0,0,0,0.15);">S</span>
+                        <span style="color:white;font-family:'Noto Sans JP',sans-serif;font-weight:800;font-size:36px;letter-spacing:0.02em;text-shadow:0 2px 8px rgba(0,0,0,0.15);">D</span>
                     </div>
                     <!-- Orbiting dots -->
                     <div style="position:absolute;top:50%;left:50%;width:140px;height:140px;margin:-70px 0 0 -70px;animation:logo-orbit 3s linear infinite;">
@@ -917,7 +917,7 @@
                     </div>
                 </div>
                 <!-- Brand text -->
-                <p style="color:#16432d;font-size:28px;font-family:'Noto Sans JP',sans-serif;font-weight:800;letter-spacing:0.1em;animation:logo-text-in 0.8s cubic-bezier(0.16,1,0.3,1) 0.2s both;">si'se</p>
+                <p style="color:#16432d;font-size:28px;font-family:'Noto Sans JP',sans-serif;font-weight:800;letter-spacing:0.1em;animation:logo-text-in 0.8s cubic-bezier(0.16,1,0.3,1) 0.2s both;">Dear</p>
                 <p style="color:#33a065;font-size:11px;font-family:'Noto Sans JP',sans-serif;margin-top:6px;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;animation:logo-text-in 0.8s cubic-bezier(0.16,1,0.3,1) 0.4s both;">Management Dashboard</p>
                 <!-- Progress bar -->
                 <div style="width:120px;height:3px;background:rgba(51,160,101,0.12);border-radius:4px;margin:24px auto 0;overflow:hidden;animation:logo-text-in 0.6s ease 0.6s both;">
@@ -1208,7 +1208,7 @@
         .cf-flow-chip{font-size:14px;padding:5px 14px}
 
         /* =============================================
-           si'se解決カード 動的強調アニメーション
+           Dear解決カード 動的強調アニメーション
            ============================================= */
         @keyframes cfSolBounceIn{
             0%{opacity:0;transform:translateY(20px) scale(0.92)}
@@ -1261,7 +1261,7 @@
 
         // 統合 Google Apps Script URL（全機能で共有・1つのスプレッドシートで管理）
         const DEFAULT_GAS_URL = 'https://script.google.com/macros/s/AKfycbzEVvDqMrYC8QkWgHisvP_LXbjWigCfpqB2eHOzCBoFaf1B_5ANnEU48LGaZ83VMnY1TA/exec';
-        let UNIFIED_GAS_URL = localStorage.getItem('sise_unified_gas_url') || DEFAULT_GAS_URL;
+        let UNIFIED_GAS_URL = localStorage.getItem('dear_unified_gas_url') || DEFAULT_GAS_URL;
 
         // GASリクエストのラッパー: 「不明なtype」エラー時にデフォルトURLへフォールバック
         const fetchGAS = async (queryString) => {
@@ -1271,7 +1271,7 @@
             if (data.error && typeof data.error === 'string' && data.error.includes('不明なtype') && UNIFIED_GAS_URL !== DEFAULT_GAS_URL) {
                 console.warn('[GAS] 古いデプロイを検出。デフォルトURLにフォールバック:', DEFAULT_GAS_URL.substring(0, 60) + '...');
                 UNIFIED_GAS_URL = DEFAULT_GAS_URL;
-                localStorage.setItem('sise_unified_gas_url', DEFAULT_GAS_URL);
+                localStorage.setItem('dear_unified_gas_url', DEFAULT_GAS_URL);
                 const retryRes = await fetch(DEFAULT_GAS_URL + queryString);
                 return retryRes.json();
             }
@@ -1319,7 +1319,7 @@
         // スタッフ・アクセス管理
         // ========================================
 
-        const STAFF_STORAGE_KEY = 'sise_staff_config';
+        const STAFF_STORAGE_KEY = 'dear_staff_config';
 
         // URLパラメータからアクセス情報をデコード
         const parseAccessFromUrl = () => {
@@ -1364,7 +1364,7 @@
 
         // GASスプレッドシート経由のスタッフ管理
         const gasPostRequest = async (body) => {
-            const gasUrl = localStorage.getItem('sise_unified_gas_url');
+            const gasUrl = localStorage.getItem('dear_unified_gas_url');
             if (!gasUrl) return null;
             try {
                 const resp = await fetch(gasUrl, {
@@ -1546,7 +1546,7 @@
         // アバターカラー生成
         const getAvatarColor = (name) => {
             const colors = [
-                'from-sise-400 to-sise-600',
+                'from-dear-400 to-dear-600',
                 'from-emerald-400 to-emerald-600',
                 'from-teal-400 to-teal-600',
                 'from-cyan-400 to-cyan-600',
@@ -1704,7 +1704,7 @@
         };
 
         // KPIカードコンポーネント
-        const KpiCard = ({ title, value, subValue, trend, icon, color = "bg-sise-500", gradientFrom = "from-sise-400", gradientTo = "to-sise-600", sparkData, accentColor, loading }) => {
+        const KpiCard = ({ title, value, subValue, trend, icon, color = "bg-dear-500", gradientFrom = "from-dear-400", gradientTo = "to-dear-600", sparkData, accentColor, loading }) => {
             if (loading) {
                 return (
                     <Card hover className="group kpi-card relative overflow-hidden">
@@ -1751,13 +1751,13 @@
             <div className="flex flex-wrap items-center justify-between gap-3 mb-1">
                 <div className="flex items-center">
                     {icon && (
-                        <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-sise-400 to-sise-600 text-white flex items-center justify-center mr-3 shadow-lg shadow-sise-500/20">
+                        <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-dear-400 to-dear-600 text-white flex items-center justify-center mr-3 shadow-lg shadow-dear-500/20">
                             <Icon name={icon} size={18} />
                         </div>
                     )}
                     <div>
                         <h2 className="text-lg md:text-xl font-bold text-slate-800">{title}</h2>
-                        {subtitle && <p className="text-[10px] md:text-[11px] text-sise-500 tracking-widest font-semibold uppercase">{subtitle}</p>}
+                        {subtitle && <p className="text-[10px] md:text-[11px] text-dear-500 tracking-widest font-semibold uppercase">{subtitle}</p>}
                     </div>
                 </div>
                 {children}
@@ -2457,8 +2457,8 @@
         const MEMBER_USAGE_GAS_URL = UNIFIED_GAS_URL;
 
         // プラン別の月間利用上限設定
-        const PLAN_LIMITS_STORAGE_KEY = 'sise_usage_plan_limits';
-        const CARRYOVER_STORAGE_KEY = 'sise_usage_carryover';
+        const PLAN_LIMITS_STORAGE_KEY = 'dear_usage_plan_limits';
+        const CARRYOVER_STORAGE_KEY = 'dear_usage_carryover';
 
         const useMemberUsage = () => {
             const [usageData, setUsageData] = useState({});
@@ -2536,9 +2536,9 @@
                                     const merged = { ...prev, ...data.usage };
                                     // ローカルにも反映
                                     try {
-                                        const all = JSON.parse(localStorage.getItem('sise_member_usage') || '{}');
+                                        const all = JSON.parse(localStorage.getItem('dear_member_usage') || '{}');
                                         all[currentMonth] = merged;
-                                        localStorage.setItem('sise_member_usage', JSON.stringify(all));
+                                        localStorage.setItem('dear_member_usage', JSON.stringify(all));
                                     } catch (e) {}
                                     return merged;
                                 });
@@ -2553,7 +2553,7 @@
             // ローカルストレージからロード + GAS初回読み込み
             useEffect(() => {
                 try {
-                    const stored = JSON.parse(localStorage.getItem('sise_member_usage') || '{}');
+                    const stored = JSON.parse(localStorage.getItem('dear_member_usage') || '{}');
                     setUsageData(stored[currentMonth] || {});
                 } catch (e) { setUsageData({}); }
 
@@ -2575,9 +2575,9 @@
                 setUsageData(prev => {
                     const updated = { ...prev, [key]: Math.max(0, count) };
                     try {
-                        const all = JSON.parse(localStorage.getItem('sise_member_usage') || '{}');
+                        const all = JSON.parse(localStorage.getItem('dear_member_usage') || '{}');
                         all[currentMonth] = updated;
-                        localStorage.setItem('sise_member_usage', JSON.stringify(all));
+                        localStorage.setItem('dear_member_usage', JSON.stringify(all));
                     } catch (e) {}
                     // GASへ即時同期（バックグラウンド）
                     if (MEMBER_USAGE_GAS_URL !== 'YOUR_UNIFIED_GAS_URL') {
@@ -2598,9 +2598,9 @@
             const saveToSheet = useCallback(async (members) => {
                 setSaving(true);
                 try {
-                    const all = JSON.parse(localStorage.getItem('sise_member_usage') || '{}');
+                    const all = JSON.parse(localStorage.getItem('dear_member_usage') || '{}');
                     all[currentMonth] = usageData;
-                    localStorage.setItem('sise_member_usage', JSON.stringify(all));
+                    localStorage.setItem('dear_member_usage', JSON.stringify(all));
 
                     if (MEMBER_USAGE_GAS_URL !== 'YOUR_UNIFIED_GAS_URL') {
                         const payload = Object.entries(usageData).map(([rawKey, count]) => {
@@ -2656,7 +2656,7 @@
         // ========================================
 
         const TICKET_GAS_URL = UNIFIED_GAS_URL;
-        const TICKET_STORAGE_KEY = 'sise_ticket_data';
+        const TICKET_STORAGE_KEY = 'dear_ticket_data';
 
         const useTicketManagement = () => {
             // 回数券プラン（種類）
@@ -2893,7 +2893,7 @@
         // QR・現金決済会員管理（手動会員管理）
         // ========================================
 
-        const MANUAL_MEMBERS_STORAGE_KEY = 'sise_manual_members';
+        const MANUAL_MEMBERS_STORAGE_KEY = 'dear_manual_members';
         const MANUAL_MEMBERS_GAS_URL = UNIFIED_GAS_URL;
 
         const useManualMembers = () => {
@@ -3216,7 +3216,7 @@
         // 出納帳（キャッシュブック）- スプレッドシートファースト
         // ========================================
 
-        const CASHBOOK_CACHE_KEY = 'sise_cashbook_cache';
+        const CASHBOOK_CACHE_KEY = 'dear_cashbook_cache';
 
         const useCashbook = () => {
             const [entries, setEntries] = useState([]);
@@ -3641,7 +3641,7 @@
             const [loading, setLoading] = useState(false);
             const [searchQuery, setSearchQuery] = useState('');
             const [counselingStore, setCounselingStore] = useState(() => {
-                const saved = localStorage.getItem('sise_counseling_store') || 'honatsugi';
+                const saved = localStorage.getItem('dear_counseling_store') || 'honatsugi';
                 // 権限のある店舗のみ許可（Square IDと名前ベースで照合）
                 const allowed = getAllowedCounselingStores();
                 if (allowed.length > 0 && allowed.length < COUNSELING_STORES.length) {
@@ -3731,7 +3731,7 @@
 
             // 店舗変更時にリロード
             useEffect(() => {
-                localStorage.setItem('sise_counseling_store', counselingStore);
+                localStorage.setItem('dear_counseling_store', counselingStore);
                 setCustomers([]);
                 setSelectedCustomer(null);
                 fetchCustomerList();
@@ -4294,9 +4294,9 @@
                     <Card className="!p-3 md:!p-4">
                         <div className="flex flex-wrap items-center justify-between gap-3">
                             <div className="flex items-center gap-2">
-                                <Icon name="building-2" size={16} className="text-sise-500 hide-mobile" />
+                                <Icon name="building-2" size={16} className="text-dear-500 hide-mobile" />
                                 <select value={selectedStore} onChange={(e) => setSelectedStore(e.target.value)}
-                                    className="px-3 py-2 border border-slate-200 rounded-xl text-sm focus:border-sise-500 focus:ring-2 focus:ring-sise-500/20 outline-none bg-white/80">
+                                    className="px-3 py-2 border border-slate-200 rounded-xl text-sm focus:border-dear-500 focus:ring-2 focus:ring-dear-500/20 outline-none bg-white/80">
                                     <option value="all">全店舗</option>
                                     {(currentAccess ? serverStores.filter(s => currentAccess.storeIds.includes(s.id)) : serverStores).map(s =>
                                         <option key={s.id} value={s.name}>{s.name}</option>
@@ -4357,7 +4357,7 @@
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 md:gap-4">
                         <KpiCard title="アクティブ会員" value={formatNumber(totalActiveMembers)}
                             subValue={cashActiveMembers > 0 ? `Square: ${formatNumber(memberData.activeMembers)} / 現金: ${cashActiveMembers}` : `総会員: ${formatNumber(memberData.totalMembers)}人`} trend={null} icon="users"
-                            gradientFrom="from-sise-400" gradientTo="to-sise-600" accentColor="#33a065" loading={memberData.loading} />
+                            gradientFrom="from-dear-400" gradientTo="to-dear-600" accentColor="#33a065" loading={memberData.loading} />
                         <KpiCard title="想定月間売上" value={formatCurrency(totalExpectedRevenue)}
                             subValue={cashActiveRevenue > 0 ? `Square: ${formatCurrency(memberData.expectedRevenue)} / 現金: ${formatCurrency(cashActiveRevenue)}` : 'サブスク収益'} trend={null} icon="wallet"
                             gradientFrom="from-emerald-400" gradientTo="to-emerald-600" accentColor="#059669" loading={memberData.loading} />
@@ -4397,7 +4397,7 @@
                             <div className="flex items-center justify-between mb-4">
                                 <div>
                                     <h3 className="text-base font-bold text-slate-800">日別推移</h3>
-                                    <p className="text-[10px] text-sise-500 tracking-widest font-semibold">DAILY TREND</p>
+                                    <p className="text-[10px] text-dear-500 tracking-widest font-semibold">DAILY TREND</p>
                                 </div>
                                 <div className="flex items-center gap-3 text-[10px]">
                                     <span className="flex items-center gap-1"><span className="w-2.5 h-2.5 rounded-full bg-sky-500"></span>新規</span>
@@ -4431,7 +4431,7 @@
                         {/* チャネル別カード */}
                         <Card>
                             <h3 className="text-base font-bold text-slate-800 mb-1">チャネル別パフォーマンス</h3>
-                            <p className="text-[10px] text-sise-500 mb-4 tracking-widest font-semibold">CHANNEL BREAKDOWN</p>
+                            <p className="text-[10px] text-dear-500 mb-4 tracking-widest font-semibold">CHANNEL BREAKDOWN</p>
                             <div className="space-y-3">
                                 {aggregatedData.byChannel.map((ch) => {
                                     const rate = parseFloat(ch.rate) || 0;
@@ -4471,7 +4471,7 @@
                             <div className="flex items-center justify-between mb-4">
                                 <div>
                                     <h3 className="text-base font-bold text-slate-800">新規 vs 契約</h3>
-                                    <p className="text-[10px] text-sise-500 tracking-widest font-semibold">NEW vs CONTRACT</p>
+                                    <p className="text-[10px] text-dear-500 tracking-widest font-semibold">NEW vs CONTRACT</p>
                                 </div>
                             </div>
                             <ResponsiveContainer width="100%" height={barChartHeight}>
@@ -4500,7 +4500,7 @@
                                 <div className="flex items-center justify-between mb-4">
                                     <div>
                                         <h3 className="text-base font-bold text-slate-800">店舗ランキング</h3>
-                                        <p className="text-[10px] text-sise-500 tracking-widest font-semibold">STORE RANKING</p>
+                                        <p className="text-[10px] text-dear-500 tracking-widest font-semibold">STORE RANKING</p>
                                     </div>
                                     {aggregatedData.topStore && (
                                         <span className="flex items-center gap-1 text-xs font-semibold text-amber-600 bg-amber-50 px-2.5 py-1 rounded-full">
@@ -4574,7 +4574,7 @@
                         </div>
                         <div className="glass-card-glow p-5">
                             <div className="flex items-center gap-2 mb-3">
-                                <Icon name="activity" size={16} className="text-sise-500" />
+                                <Icon name="activity" size={16} className="text-dear-500" />
                                 <h3 className="text-sm font-bold text-slate-800">期間サマリー</h3>
                             </div>
                             <div className="grid grid-cols-2 gap-3">
@@ -4646,14 +4646,14 @@
                     <SectionHeader title="日報一覧" subtitle="DAILY REPORTS" icon="clipboard-list">
                         <div className="flex items-center gap-2">
                             <select value={filterStore} onChange={(e) => setFilterStore(e.target.value)}
-                                className="px-3 py-2 border border-slate-200 rounded-xl text-sm focus:border-sise-500 outline-none bg-white/80">
+                                className="px-3 py-2 border border-slate-200 rounded-xl text-sm focus:border-dear-500 outline-none bg-white/80">
                                 <option value="all">全店舗</option>
                                 {(currentAccess ? serverStores.filter(s => currentAccess.storeIds.includes(s.id)) : serverStores).map(s =>
                                     <option key={s.id} value={s.name}>{s.name}</option>
                                 )}
                             </select>
                             <button onClick={() => setSortOrder(sortOrder === 'desc' ? 'asc' : 'desc')}
-                                className="flex items-center px-3 py-2 border border-slate-200 rounded-xl text-sm hover:bg-sise-50 transition-colors bg-white/80">
+                                className="flex items-center px-3 py-2 border border-slate-200 rounded-xl text-sm hover:bg-dear-50 transition-colors bg-white/80">
                                 <Icon name={sortOrder === 'desc' ? 'arrow-down' : 'arrow-up'} size={15} className="mr-1" />
                                 <span className="hide-mobile">{sortOrder === 'desc' ? '新しい順' : '古い順'}</span>
                             </button>
@@ -4706,7 +4706,7 @@
                                                 })}
                                             </td>
                                             <td className="py-3 px-3">
-                                                <span className="px-2 py-1 bg-sise-100/80 text-sise-700 rounded-lg text-[11px] font-semibold">
+                                                <span className="px-2 py-1 bg-dear-100/80 text-dear-700 rounded-lg text-[11px] font-semibold">
                                                     {report.store}
                                                 </span>
                                             </td>
@@ -4769,7 +4769,7 @@
                                             <span className="text-xs font-bold text-slate-600">
                                                 {new Date(report.timestamp).toLocaleDateString('ja-JP', { month: 'short', day: 'numeric' })}
                                             </span>
-                                            <span className="px-2 py-0.5 bg-sise-100/80 text-sise-700 rounded-lg text-[11px] font-bold">{report.store}</span>
+                                            <span className="px-2 py-0.5 bg-dear-100/80 text-dear-700 rounded-lg text-[11px] font-bold">{report.store}</span>
                                         </div>
                                         <div className="flex gap-2">
                                             {report.dailyTasksCompleted
@@ -4887,13 +4887,13 @@
                     <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                         <div>
                             <h3 className="text-base font-bold text-slate-800 flex items-center">
-                                <Icon name="wallet" size={18} className="mr-2 text-sise-500" />
+                                <Icon name="wallet" size={18} className="mr-2 text-dear-500" />
                                 QR・現金決済 会員管理
                             </h3>
-                            <p className="text-[10px] text-sise-500 tracking-widest font-semibold mt-0.5">MANUAL PAYMENT MEMBERS</p>
+                            <p className="text-[10px] text-dear-500 tracking-widest font-semibold mt-0.5">MANUAL PAYMENT MEMBERS</p>
                         </div>
                         <div className="flex items-center gap-2">
-                            <span className="text-xs bg-sise-50 text-sise-700 px-2 py-1 rounded-lg font-bold">{formatCurrency(manualRevenue)}/月</span>
+                            <span className="text-xs bg-dear-50 text-dear-700 px-2 py-1 rounded-lg font-bold">{formatCurrency(manualRevenue)}/月</span>
                             <button
                                 onClick={async () => {
                                     const ok = await manualMembersHook.saveToGAS(manualMembers);
@@ -4932,7 +4932,7 @@
                             </button>
                             <button
                                 onClick={() => setShowManualAddForm(!showManualAddForm)}
-                                className="flex items-center px-3 py-2 bg-sise-500 hover:bg-sise-600 text-white rounded-xl text-sm font-medium shadow-lg shadow-sise-500/25 transition-all active:scale-95"
+                                className="flex items-center px-3 py-2 bg-dear-500 hover:bg-dear-600 text-white rounded-xl text-sm font-medium shadow-lg shadow-dear-500/25 transition-all active:scale-95"
                             >
                                 <Icon name="user-plus" size={16} className="mr-1.5" />
                                 入会登録
@@ -4949,8 +4949,8 @@
 
                     {/* KPI小カード */}
                     <div className="grid grid-cols-3 gap-2 mb-4">
-                        <div className="bg-sise-50/60 rounded-xl p-3 text-center">
-                            <p className="text-lg font-extrabold text-sise-700">{activeManualCount}</p>
+                        <div className="bg-dear-50/60 rounded-xl p-3 text-center">
+                            <p className="text-lg font-extrabold text-dear-700">{activeManualCount}</p>
                             <p className="text-[10px] text-slate-500 font-medium">アクティブ</p>
                         </div>
                         <div className="bg-red-50/60 rounded-xl p-3 text-center">
@@ -4967,9 +4967,9 @@
 
                     {/* 新規入会フォーム */}
                     {showManualAddForm && (
-                        <div className="mb-4 p-4 bg-sise-50/50 rounded-xl border border-sise-200 animate-scale-in">
+                        <div className="mb-4 p-4 bg-dear-50/50 rounded-xl border border-dear-200 animate-scale-in">
                             <h4 className="font-semibold text-slate-800 mb-3 flex items-center">
-                                <Icon name="user-plus" size={16} className="mr-2 text-sise-500" />
+                                <Icon name="user-plus" size={16} className="mr-2 text-dear-500" />
                                 新規会員登録
                             </h4>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -4987,7 +4987,7 @@
                                     <label className="block text-xs font-medium text-slate-600 mb-1">決済方法 *</label>
                                     <div className="flex gap-2">
                                         {['QR', 'CASH'].map(method => (
-                                            <label key={method} className={`flex-1 text-center px-3 py-2.5 rounded-xl border-2 cursor-pointer transition-all text-sm font-medium ${newManualMember.paymentMethod === method ? 'bg-sise-50 border-sise-400 text-sise-700' : 'bg-white border-slate-200 text-slate-500 hover:border-slate-300'}`}>
+                                            <label key={method} className={`flex-1 text-center px-3 py-2.5 rounded-xl border-2 cursor-pointer transition-all text-sm font-medium ${newManualMember.paymentMethod === method ? 'bg-dear-50 border-dear-400 text-dear-700' : 'bg-white border-slate-200 text-slate-500 hover:border-slate-300'}`}>
                                                 <input type="radio" name="payMethod" value={method} checked={newManualMember.paymentMethod === method}
                                                     onChange={() => setNewManualMember(p => ({...p, paymentMethod: method}))} className="sr-only" />
                                                 <Icon name={method === 'QR' ? 'qr-code' : 'banknote'} size={14} className="inline mr-1 -mt-0.5" />
@@ -5065,12 +5065,12 @@
                     {/* ビュー切替タブ */}
                     <div className="flex gap-1 bg-slate-100 dark:bg-slate-800/60 rounded-2xl p-1.5 mb-4">
                         <button onClick={() => setViewMode('manual')}
-                            className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${viewMode === 'manual' ? 'bg-white dark:bg-sise-900/60 text-sise-700 shadow-md shadow-sise-500/10' : 'text-slate-500 hover:text-slate-700 active:scale-95'}`}>
+                            className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${viewMode === 'manual' ? 'bg-white dark:bg-dear-900/60 text-dear-700 shadow-md shadow-dear-500/10' : 'text-slate-500 hover:text-slate-700 active:scale-95'}`}>
                             <Icon name="wallet" size={14} />
                             手動会員
                         </button>
                         <button onClick={() => setViewMode('combined')}
-                            className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${viewMode === 'combined' ? 'bg-white dark:bg-sise-900/60 text-sise-700 shadow-md shadow-sise-500/10' : 'text-slate-500 hover:text-slate-700 active:scale-95'}`}>
+                            className={`flex-1 flex items-center justify-center gap-1.5 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${viewMode === 'combined' ? 'bg-white dark:bg-dear-900/60 text-dear-700 shadow-md shadow-dear-500/10' : 'text-slate-500 hover:text-slate-700 active:scale-95'}`}>
                             <Icon name="merge" size={14} />
                             統合一覧
                         </button>
@@ -5100,13 +5100,13 @@
                                 <div className="text-center py-6 text-slate-400 text-sm">会員データがありません</div>
                             )}
                             {combinedMembers.map(member => (
-                                <div key={member.id} className="flex items-center p-3 rounded-xl border border-slate-100 hover:border-sise-200 transition-colors bg-white/60">
+                                <div key={member.id} className="flex items-center p-3 rounded-xl border border-slate-100 hover:border-dear-200 transition-colors bg-white/60">
                                     <Avatar name={member.name} size={36} />
                                     <div className="ml-3 flex-1 min-w-0">
                                         <p className="font-bold text-slate-800 text-sm truncate">{member.name}</p>
                                         <div className="flex items-center gap-1.5 mt-0.5">
                                             <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded ${
-                                                member.source === 'square' ? 'bg-sise-100 text-sise-700' :
+                                                member.source === 'square' ? 'bg-dear-100 text-dear-700' :
                                                 member.paymentMethod === 'QR' ? 'bg-blue-100 text-blue-700' : 'bg-amber-100 text-amber-700'
                                             }`}>
                                                 {member.source === 'square' ? 'Square' : member.paymentMethod === 'QR' ? 'QR' : '現金'}
@@ -5120,7 +5120,7 @@
                             ))}
                             <div className="mt-3 p-3 bg-slate-50 rounded-xl text-center">
                                 <p className="text-xs text-slate-500">
-                                    Square: <span className="font-bold text-sise-600">{(squareMembers || []).filter(m => m.status === 'ACTIVE').length}名</span>
+                                    Square: <span className="font-bold text-dear-600">{(squareMembers || []).filter(m => m.status === 'ACTIVE').length}名</span>
                                     　＋　手動: <span className="font-bold text-blue-600">{activeManualCount}名</span>
                                     　＝　合計: <span className="font-extrabold text-slate-800">{(squareMembers || []).filter(m => m.status === 'ACTIVE').length + activeManualCount}名</span>
                                 </p>
@@ -5135,7 +5135,7 @@
                                 const paid = getCurrentMonthPayment(member);
                                 const isExpanded = expandedMember === member.id;
                                 return (
-                                    <div key={member.id} className={`rounded-xl border transition-all ${member.status === 'ACTIVE' ? 'bg-white/60 border-slate-100 hover:border-sise-200' : 'bg-slate-50/60 border-slate-100 opacity-70'}`}>
+                                    <div key={member.id} className={`rounded-xl border transition-all ${member.status === 'ACTIVE' ? 'bg-white/60 border-slate-100 hover:border-dear-200' : 'bg-slate-50/60 border-slate-100 opacity-70'}`}>
                                         {/* メイン行 */}
                                         <div className="p-3 cursor-pointer" onClick={() => setExpandedMember(isExpanded ? null : member.id)}>
                                             <div className="flex items-center justify-between">
@@ -5214,7 +5214,7 @@
                                                     {member.status === 'ACTIVE' && (
                                                         <>
                                                             <button onClick={(e) => { e.stopPropagation(); setShowPaymentForm(showPaymentForm === member.id ? null : member.id); setPaymentInput({ amount: String(member.monthlyPrice || ''), date: new Date().toISOString().slice(0, 10), method: member.paymentMethod || 'CASH', note: '' }); }}
-                                                                className="flex items-center px-3.5 py-2.5 bg-sise-50 hover:bg-sise-100 border border-sise-200 text-sise-700 rounded-xl text-xs font-semibold transition-all active:scale-95">
+                                                                className="flex items-center px-3.5 py-2.5 bg-dear-50 hover:bg-dear-100 border border-dear-200 text-dear-700 rounded-xl text-xs font-semibold transition-all active:scale-95">
                                                                 <Icon name="plus-circle" size={14} className="mr-1" /> 入金記録
                                                             </button>
                                                             <button onClick={(e) => { e.stopPropagation(); setPlanChangeForm(planChangeForm === member.id ? null : member.id); }}
@@ -5229,7 +5229,7 @@
                                                     )}
                                                     {member.status === 'CANCELED' && (
                                                         <button onClick={(e) => { e.stopPropagation(); if(confirm(`${member.name}を再入会しますか？`)) reactivateMember(member.id); }}
-                                                            className="flex items-center px-3.5 py-2.5 bg-sise-50 hover:bg-sise-100 border border-sise-200 text-sise-700 rounded-xl text-xs font-semibold transition-all active:scale-95">
+                                                            className="flex items-center px-3.5 py-2.5 bg-dear-50 hover:bg-dear-100 border border-dear-200 text-dear-700 rounded-xl text-xs font-semibold transition-all active:scale-95">
                                                             <Icon name="user-plus" size={14} className="mr-1" /> 再入会
                                                         </button>
                                                     )}
@@ -5241,8 +5241,8 @@
 
                                                 {/* 入金記録フォーム */}
                                                 {showPaymentForm === member.id && (
-                                                    <div className="p-3 bg-sise-50/60 rounded-xl border border-sise-200 mb-3 animate-scale-in">
-                                                        <p className="text-xs font-semibold text-sise-700 mb-2 flex items-center">
+                                                    <div className="p-3 bg-dear-50/60 rounded-xl border border-dear-200 mb-3 animate-scale-in">
+                                                        <p className="text-xs font-semibold text-dear-700 mb-2 flex items-center">
                                                             <Icon name="plus-circle" size={14} className="mr-1" /> 入金記録を追加
                                                         </p>
                                                         <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
@@ -5600,7 +5600,7 @@
                         {/* ヘッダー */}
                         <div className="flex items-center justify-between mb-5">
                             <div className="flex items-center gap-3">
-                                <div className="w-10 h-10 bg-gradient-to-br from-sise-400 to-sise-600 rounded-xl flex items-center justify-center">
+                                <div className="w-10 h-10 bg-gradient-to-br from-dear-400 to-dear-600 rounded-xl flex items-center justify-center">
                                     <Icon name="link" size={20} className="text-white" />
                                 </div>
                                 <div>
@@ -5616,7 +5616,7 @@
                         {/* プラン選択 */}
                         {fetchingPlans ? (
                             <div className="flex items-center justify-center py-8">
-                                <Icon name="loader" size={24} className="animate-spin text-sise-500 mr-2" />
+                                <Icon name="loader" size={24} className="animate-spin text-dear-500 mr-2" />
                                 <span className="text-sm text-slate-500">プランを読み込み中...</span>
                             </div>
                         ) : plans.length === 0 ? (
@@ -5638,7 +5638,7 @@
                                                     key={plan.id}
                                                     className={`flex items-center justify-between p-3 rounded-xl border-2 cursor-pointer transition-all ${
                                                         selectedPlanId === plan.id
-                                                            ? 'border-sise-400 bg-sise-50/50'
+                                                            ? 'border-dear-400 bg-dear-50/50'
                                                             : 'border-slate-200 hover:border-slate-300 bg-white'
                                                     }`}
                                                 >
@@ -5649,7 +5649,7 @@
                                                             value={plan.id}
                                                             checked={selectedPlanId === plan.id}
                                                             onChange={() => setSelectedPlanId(plan.id)}
-                                                            className="accent-sise-500"
+                                                            className="accent-dear-500"
                                                         />
                                                         <div>
                                                             <p className="font-medium text-slate-800 text-sm">{plan.name}</p>
@@ -5657,7 +5657,7 @@
                                                         </div>
                                                     </div>
                                                     {plan.price > 0 && (
-                                                        <span className="font-bold text-sise-700 text-sm">
+                                                        <span className="font-bold text-dear-700 text-sm">
                                                             {Number(plan.price).toLocaleString()}円
                                                         </span>
                                                     )}
@@ -5723,7 +5723,7 @@
                                                     className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                                                         copied
                                                             ? 'bg-green-100 text-green-700 border border-green-200'
-                                                            : 'bg-sise-50 text-sise-700 border border-sise-200 hover:bg-sise-100'
+                                                            : 'bg-dear-50 text-dear-700 border border-dear-200 hover:bg-dear-100'
                                                     }`}
                                                 >
                                                     <Icon name={copied ? "check" : "copy"} size={14} />
@@ -5745,7 +5745,7 @@
                                                 <a
                                                     href={qrDataUrl}
                                                     download="subscription-qr.png"
-                                                    className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2.5 bg-sise-50 hover:bg-sise-100 text-sise-700 border border-sise-200 rounded-xl text-sm font-medium transition-colors"
+                                                    className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2.5 bg-dear-50 hover:bg-dear-100 text-dear-700 border border-dear-200 rounded-xl text-sm font-medium transition-colors"
                                                 >
                                                     <Icon name="download" size={14} />
                                                     QR画像を保存
@@ -5914,7 +5914,7 @@
                             {(!currentAccess || currentAccess.role === 'manager' || currentAccess.role === 'headquarter') && (
                                 <button
                                     onClick={() => setShowSubscriptionLink(true)}
-                                    className="flex items-center px-4 py-2.5 bg-gradient-to-r from-sise-500 to-sise-600 hover:from-sise-600 hover:to-sise-700 text-white rounded-xl font-medium text-sm transition-all shadow-md hover:shadow-lg"
+                                    className="flex items-center px-4 py-2.5 bg-gradient-to-r from-dear-500 to-dear-600 hover:from-dear-600 hover:to-dear-700 text-white rounded-xl font-medium text-sm transition-all shadow-md hover:shadow-lg"
                                 >
                                     <Icon name="qr-code" size={16} className="mr-2" />
                                     契約リンク発行
@@ -5955,7 +5955,7 @@
                             value={combinedActiveMembers}
                             subValue={cashActiveMemberCount > 0 ? `Square: ${memberData.activeMembers} / 現金: ${cashActiveMemberCount}` : `累計: ${memberData.totalMembers}人`}
                             icon="users"
-                            gradientFrom="from-sise-400" gradientTo="to-sise-600"
+                            gradientFrom="from-dear-400" gradientTo="to-dear-600"
                             loading={memberData.loading}
                         />
                         <KpiCard
@@ -6003,9 +6003,9 @@
                                     <span className="text-slate-600">平均継続期間</span>
                                     <span className="font-bold text-slate-900">約{avgRetentionMonths}ヶ月</span>
                                 </div>
-                                <div className="flex justify-between items-center p-3 bg-sise-50 rounded-lg border border-sise-200">
-                                    <span className="text-sise-700 font-medium">推定LTV</span>
-                                    <span className="font-bold text-sise-900">{formatCurrency(estimatedLTV)}</span>
+                                <div className="flex justify-between items-center p-3 bg-dear-50 rounded-lg border border-dear-200">
+                                    <span className="text-dear-700 font-medium">推定LTV</span>
+                                    <span className="font-bold text-dear-900">{formatCurrency(estimatedLTV)}</span>
                                 </div>
                             </div>
                         </Card>
@@ -6021,7 +6021,7 @@
                                     </div>
                                     <div className="w-full bg-slate-200 rounded-full h-2">
                                         <div
-                                            className="bg-gradient-to-r from-sise-400 to-sise-500 h-2 rounded-full transition-all"
+                                            className="bg-gradient-to-r from-dear-400 to-dear-500 h-2 rounded-full transition-all"
                                             style={{ width: `${100 - memberData.churnRate}%` }}
                                         ></div>
                                     </div>
@@ -6029,11 +6029,11 @@
                                 <div>
                                     <div className="flex justify-between text-sm mb-1">
                                         <span className="text-slate-600">目標会員数達成率</span>
-                                        <span className="font-semibold text-sise-600">{formatPercent(memberData.activeMembers / 200 * 100)}</span>
+                                        <span className="font-semibold text-dear-600">{formatPercent(memberData.activeMembers / 200 * 100)}</span>
                                     </div>
                                     <div className="w-full bg-slate-200 rounded-full h-2">
                                         <div
-                                            className="bg-gradient-to-r from-sise-300 to-sise-500 h-2 rounded-full transition-all"
+                                            className="bg-gradient-to-r from-dear-300 to-dear-500 h-2 rounded-full transition-all"
                                             style={{ width: `${Math.min(memberData.activeMembers / 200 * 100, 100)}%` }}
                                         ></div>
                                     </div>
@@ -6097,7 +6097,7 @@
                                         <th className="text-right py-3 px-3 font-semibold text-green-600">入会</th>
                                         <th className="text-right py-3 px-3 font-semibold text-red-600">退会</th>
                                         <th className="text-right py-3 px-3 font-semibold text-violet-600">プラン変更</th>
-                                        <th className="text-right py-3 px-3 font-semibold text-sise-600">純増減</th>
+                                        <th className="text-right py-3 px-3 font-semibold text-dear-600">純増減</th>
                                         <th className="text-right py-3 px-3 font-semibold text-slate-600">アクティブ</th>
                                         <th className="text-left py-3 px-3 font-semibold text-slate-600">推移</th>
                                     </tr>
@@ -6106,10 +6106,10 @@
                                     {(memberData.monthlyTrend || []).slice().reverse().map((m, idx) => {
                                         const maxActive = Math.max(...(memberData.monthlyTrend || []).map(t => t.activeMembers || 0), 1);
                                         return (
-                                            <tr key={m.month} className={`border-b border-slate-100 ${idx === 0 ? 'bg-sise-50' : 'hover:bg-slate-50'}`}>
+                                            <tr key={m.month} className={`border-b border-slate-100 ${idx === 0 ? 'bg-dear-50' : 'hover:bg-slate-50'}`}>
                                                 <td className="py-3 px-3 font-medium text-slate-900">
                                                     {m.month}
-                                                    {idx === 0 && <span className="ml-2 text-xs bg-sise-100 text-sise-700 px-2 py-0.5 rounded-full">今月</span>}
+                                                    {idx === 0 && <span className="ml-2 text-xs bg-dear-100 text-dear-700 px-2 py-0.5 rounded-full">今月</span>}
                                                 </td>
                                                 <td className="text-right py-3 px-3">
                                                     <span className="font-bold text-green-600">+{m.newMembers}</span>
@@ -6131,7 +6131,7 @@
                                                 <td className="py-3 px-3">
                                                     <div className="w-full bg-slate-200 rounded-full h-2 min-w-[80px]">
                                                         <div
-                                                            className="bg-gradient-to-r from-sise-300 to-sise-500 h-2 rounded-full transition-all"
+                                                            className="bg-gradient-to-r from-dear-300 to-dear-500 h-2 rounded-full transition-all"
                                                             style={{ width: `${((m.activeMembers || 0) / maxActive) * 100}%` }}
                                                         ></div>
                                                     </div>
@@ -6149,7 +6149,7 @@
                         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                             <div>
                                 <h3 className="text-base font-bold text-slate-800">会員一覧</h3>
-                                <p className="text-[10px] text-sise-500 tracking-widest font-semibold">MEMBER LIST ({filteredMembers.length})</p>
+                                <p className="text-[10px] text-dear-500 tracking-widest font-semibold">MEMBER LIST ({filteredMembers.length})</p>
                             </div>
                             <div className="flex items-center gap-2 w-full md:w-auto">
                                 <div className="relative flex-1 md:flex-initial">
@@ -6159,13 +6159,13 @@
                                         value={searchQuery}
                                         onChange={(e) => setSearchQuery(e.target.value)}
                                         placeholder="名前・メール検索..."
-                                        className="w-full md:w-44 pl-8 pr-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-sise-400 focus:ring-2 focus:ring-sise-400/20 outline-none bg-white/80"
+                                        className="w-full md:w-44 pl-8 pr-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-dear-400 focus:ring-2 focus:ring-dear-400/20 outline-none bg-white/80"
                                     />
                                 </div>
                                 <select
                                     value={filterStatus}
                                     onChange={(e) => setFilterStatus(e.target.value)}
-                                    className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-sise-400 outline-none bg-white/80"
+                                    className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-dear-400 outline-none bg-white/80"
                                 >
                                     <option value="all">全て</option>
                                     <option value="ACTIVE">アクティブ</option>
@@ -6244,7 +6244,7 @@
                                             <td className="text-center py-3 px-3">
                                                 <button
                                                     onClick={(e) => { e.stopPropagation(); setSelectedMember(member); }}
-                                                    className="text-sise-600 hover:text-sise-700 font-semibold text-xs hover:bg-sise-50 px-2 py-1 rounded-lg transition-colors"
+                                                    className="text-dear-600 hover:text-dear-700 font-semibold text-xs hover:bg-dear-50 px-2 py-1 rounded-lg transition-colors"
                                                 >
                                                     詳細
                                                 </button>
@@ -6261,7 +6261,7 @@
                                 <div
                                     key={member.id}
                                     onClick={() => setSelectedMember(member)}
-                                    className="p-3.5 bg-white/60 rounded-xl border border-slate-100 active:bg-sise-50/50 transition-colors cursor-pointer"
+                                    className="p-3.5 bg-white/60 rounded-xl border border-slate-100 active:bg-dear-50/50 transition-colors cursor-pointer"
                                 >
                                     <div className="flex items-center justify-between">
                                         <div className="flex items-center flex-1 min-w-0">
@@ -6458,7 +6458,7 @@
                     {/* 設定情報 */}
                     <Card className="bg-slate-50 border-slate-300">
                         <div className="flex items-start">
-                            <Icon name="info" size={20} className="text-sise-500 mr-3 mt-0.5" />
+                            <Icon name="info" size={20} className="text-dear-500 mr-3 mt-0.5" />
                             <div>
                                 <h4 className="font-semibold text-slate-900 mb-2">Square API連携について</h4>
                                 <p className="text-sm text-slate-600 mb-2">
@@ -6646,7 +6646,7 @@
                         const fRevenue = storeTickets.reduce((s, t) => s + (t.price || 0), 0);
                         return (
                             <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 md:gap-4">
-                                <KpiCard title="有効回数券" value={fActive.length} subValue={`全${storeTickets.length}件`} icon="ticket" gradientFrom="from-sise-400" gradientTo="to-sise-600" />
+                                <KpiCard title="有効回数券" value={fActive.length} subValue={`全${storeTickets.length}件`} icon="ticket" gradientFrom="from-dear-400" gradientTo="to-dear-600" />
                                 <KpiCard title="期限間近" value={fExpiring.length} subValue="30日以内" icon="alert-triangle" gradientFrom={fExpiring.length > 0 ? "from-amber-400" : "from-slate-400"} gradientTo={fExpiring.length > 0 ? "to-amber-600" : "to-slate-500"} />
                                 <KpiCard title="残セッション" value={fRemaining} subValue="有効分の合計" icon="hash" gradientFrom="from-blue-400" gradientTo="to-blue-600" />
                                 <KpiCard title="累計売上" value={formatCurrency(fRevenue)} subValue="回数券販売額" icon="wallet" gradientFrom="from-emerald-400" gradientTo="to-emerald-600" />
@@ -6656,11 +6656,11 @@
 
                     {/* タブ切り替え */}
                     <div className="flex gap-1 bg-slate-100 dark:bg-slate-800/60 rounded-2xl p-1.5">
-                        <button onClick={() => setActiveTab('tickets')} className={`flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ${activeTab === 'tickets' ? 'bg-white dark:bg-sise-900/60 text-sise-700 dark:text-sise-400 shadow-md shadow-sise-500/10' : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 hover:bg-white/50 active:scale-95'}`}>
+                        <button onClick={() => setActiveTab('tickets')} className={`flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ${activeTab === 'tickets' ? 'bg-white dark:bg-dear-900/60 text-dear-700 dark:text-dear-400 shadow-md shadow-dear-500/10' : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 hover:bg-white/50 active:scale-95'}`}>
                             <Icon name="users" size={15} />
                             購入者一覧
                         </button>
-                        <button onClick={() => setActiveTab('plans')} className={`flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ${activeTab === 'plans' ? 'bg-white dark:bg-sise-900/60 text-sise-700 dark:text-sise-400 shadow-md shadow-sise-500/10' : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 hover:bg-white/50 active:scale-95'}`}>
+                        <button onClick={() => setActiveTab('plans')} className={`flex-1 flex items-center justify-center gap-1.5 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 ${activeTab === 'plans' ? 'bg-white dark:bg-dear-900/60 text-dear-700 dark:text-dear-400 shadow-md shadow-dear-500/10' : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 hover:bg-white/50 active:scale-95'}`}>
                             <Icon name="package" size={15} />
                             回数券プラン
                         </button>
@@ -6684,13 +6684,13 @@
                                         value={searchQuery}
                                         onChange={(e) => setSearchQuery(e.target.value)}
                                         placeholder="名前・電話番号..."
-                                        className="w-full pl-8 pr-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-sise-400 focus:ring-2 focus:ring-sise-400/20 outline-none bg-white/80"
+                                        className="w-full pl-8 pr-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-dear-400 focus:ring-2 focus:ring-dear-400/20 outline-none bg-white/80"
                                     />
                                 </div>
                                 <select
                                     value={filterStatus}
                                     onChange={(e) => setFilterStatus(e.target.value)}
-                                    className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-sise-400 outline-none bg-white/80"
+                                    className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-dear-400 outline-none bg-white/80"
                                 >
                                     <option value="all">全て</option>
                                     <option value="active">有効</option>
@@ -6702,9 +6702,9 @@
 
                             {/* 新規発行フォーム */}
                             {showAddForm && (
-                                <Card className="!bg-sise-50/40 border-sise-200 animate-scale-in">
+                                <Card className="!bg-dear-50/40 border-dear-200 animate-scale-in">
                                     <h4 className="font-bold text-slate-800 mb-4 flex items-center">
-                                        <Icon name="plus-circle" size={18} className="text-sise-500 mr-2" />
+                                        <Icon name="plus-circle" size={18} className="text-dear-500 mr-2" />
                                         回数券を新規発行
                                     </h4>
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -6714,7 +6714,7 @@
                                                 type="text" value={newTicket.customerName}
                                                 onChange={(e) => setNewTicket(prev => ({ ...prev, customerName: e.target.value }))}
                                                 placeholder="例: 田中太郎"
-                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-sise-400 outline-none"
+                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-dear-400 outline-none"
                                             />
                                         </div>
                                         <div>
@@ -6723,7 +6723,7 @@
                                                 type="tel" value={newTicket.customerPhone}
                                                 onChange={(e) => setNewTicket(prev => ({ ...prev, customerPhone: e.target.value }))}
                                                 placeholder="例: 090-1234-5678"
-                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-sise-400 outline-none"
+                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-dear-400 outline-none"
                                             />
                                         </div>
                                         <div>
@@ -6731,7 +6731,7 @@
                                             <select
                                                 value={newTicket.planId}
                                                 onChange={(e) => handlePlanChange(e.target.value)}
-                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-sise-400 outline-none"
+                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-dear-400 outline-none"
                                             >
                                                 <option value="">選択してください</option>
                                                 {ticketPlans.filter(p => p.active).map(p => (
@@ -6745,7 +6745,7 @@
                                                 type="text" value={newTicket.storeName}
                                                 onChange={(e) => setNewTicket(prev => ({ ...prev, storeName: e.target.value }))}
                                                 placeholder="例: 新宿店"
-                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-sise-400 outline-none"
+                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-dear-400 outline-none"
                                             />
                                         </div>
                                         <div>
@@ -6756,7 +6756,7 @@
                                                     setNewTicket(prev => ({ ...prev, purchaseDate: e.target.value }));
                                                     if (newTicket.planId) handlePlanChange(newTicket.planId);
                                                 }}
-                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-sise-400 outline-none"
+                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-dear-400 outline-none"
                                             />
                                         </div>
                                         <div>
@@ -6764,7 +6764,7 @@
                                             <input
                                                 type="date" value={newTicket.expirationDate}
                                                 onChange={(e) => setNewTicket(prev => ({ ...prev, expirationDate: e.target.value }))}
-                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-sise-400 outline-none"
+                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-dear-400 outline-none"
                                             />
                                         </div>
                                         <div className="md:col-span-2">
@@ -6773,7 +6773,7 @@
                                                 type="text" value={newTicket.notes}
                                                 onChange={(e) => setNewTicket(prev => ({ ...prev, notes: e.target.value }))}
                                                 placeholder="備考..."
-                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-sise-400 outline-none"
+                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-dear-400 outline-none"
                                             />
                                         </div>
                                     </div>
@@ -6820,7 +6820,7 @@
                                                 <div className="flex items-center justify-between mb-2">
                                                     <span className="text-xs text-slate-500 font-medium">残り回数</span>
                                                     <span className="text-lg font-extrabold text-slate-800">
-                                                        <span className={status === 'active' ? 'text-sise-600' : status === 'expiring' ? 'text-amber-600' : 'text-slate-500'}>{ticket.remainingSessions}</span>
+                                                        <span className={status === 'active' ? 'text-dear-600' : status === 'expiring' ? 'text-amber-600' : 'text-slate-500'}>{ticket.remainingSessions}</span>
                                                         <span className="text-slate-400 text-sm font-medium"> / {ticket.totalSessions}</span>
                                                     </span>
                                                 </div>
@@ -6868,7 +6868,7 @@
                                                         <button
                                                             onClick={() => useSession(ticket.id)}
                                                             disabled={ticket.remainingSessions <= 0}
-                                                            className="flex-1 flex items-center justify-center py-2.5 bg-sise-500 hover:bg-sise-600 text-white rounded-xl text-xs font-semibold transition-all disabled:opacity-40 active:scale-95"
+                                                            className="flex-1 flex items-center justify-center py-2.5 bg-dear-500 hover:bg-dear-600 text-white rounded-xl text-xs font-semibold transition-all disabled:opacity-40 active:scale-95"
                                                         >
                                                             <Icon name="minus-circle" size={14} className="mr-1" />1回消化
                                                         </button>
@@ -6924,7 +6924,7 @@
 
                             {/* プラン追加/編集フォーム */}
                             {showPlanForm && (
-                                <Card className="!bg-sise-50/40 border-sise-200 animate-scale-in">
+                                <Card className="!bg-dear-50/40 border-dear-200 animate-scale-in">
                                     <h4 className="font-bold text-slate-800 mb-4">
                                         {editingPlan ? 'プラン編集' : '新規プラン作成'}
                                     </h4>
@@ -6935,7 +6935,7 @@
                                                 type="text" value={planForm.name}
                                                 onChange={(e) => setPlanForm(prev => ({ ...prev, name: e.target.value }))}
                                                 placeholder="例: 10回券"
-                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-sise-400 outline-none"
+                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-dear-400 outline-none"
                                             />
                                         </div>
                                         <div>
@@ -6944,7 +6944,7 @@
                                                 type="number" value={planForm.sessions}
                                                 onChange={(e) => setPlanForm(prev => ({ ...prev, sessions: e.target.value }))}
                                                 placeholder="例: 10"
-                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-sise-400 outline-none"
+                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-dear-400 outline-none"
                                             />
                                         </div>
                                         <div>
@@ -6953,7 +6953,7 @@
                                                 type="number" value={planForm.price}
                                                 onChange={(e) => setPlanForm(prev => ({ ...prev, price: e.target.value }))}
                                                 placeholder="例: 80000"
-                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-sise-400 outline-none"
+                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-dear-400 outline-none"
                                             />
                                         </div>
                                         <div>
@@ -6962,7 +6962,7 @@
                                                 type="number" value={planForm.validityDays}
                                                 onChange={(e) => setPlanForm(prev => ({ ...prev, validityDays: e.target.value }))}
                                                 placeholder="例: 180（6ヶ月）"
-                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-sise-400 outline-none"
+                                                className="w-full px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-dear-400 outline-none"
                                             />
                                         </div>
                                     </div>
@@ -7003,7 +7003,7 @@
                                                     <p className="text-[10px] text-slate-400">回数</p>
                                                 </div>
                                                 <div className="text-center">
-                                                    <p className="text-lg font-extrabold text-sise-600">{formatCurrency(plan.price)}</p>
+                                                    <p className="text-lg font-extrabold text-dear-600">{formatCurrency(plan.price)}</p>
                                                     <p className="text-[10px] text-slate-400">金額</p>
                                                 </div>
                                                 <div className="text-center">
@@ -7015,7 +7015,7 @@
                                             <div className="flex gap-2">
                                                 <button
                                                     onClick={() => { setEditingPlan(plan); setPlanForm({ name: plan.name, sessions: plan.sessions, price: plan.price, validityDays: plan.validityDays }); setShowPlanForm(true); }}
-                                                    className="flex-1 py-2.5 border border-slate-200 hover:bg-sise-50 rounded-xl text-xs font-medium text-slate-600 transition-all active:scale-95"
+                                                    className="flex-1 py-2.5 border border-slate-200 hover:bg-dear-50 rounded-xl text-xs font-medium text-slate-600 transition-all active:scale-95"
                                                 >
                                                     <Icon name="pencil" size={14} className="inline mr-1" />編集
                                                 </button>
@@ -7036,12 +7036,12 @@
                     {/* 保存情報 */}
                     <Card className="!bg-slate-50/60">
                         <div className="flex items-start">
-                            <Icon name="info" size={18} className="text-sise-500 mr-3 mt-0.5 flex-shrink-0" />
+                            <Icon name="info" size={18} className="text-dear-500 mr-3 mt-0.5 flex-shrink-0" />
                             <div className="text-sm text-slate-600">
                                 <p className="font-semibold text-slate-700 mb-1">回数券の管理について</p>
                                 <p>回数券プランの作成、顧客への発行、消化状況のトラッキングが行えます。「スプシ保存」で Google Sheets にデータを送信できます。データはローカルにも自動保存されます。</p>
                                 {lastSaved && (
-                                    <p className="text-xs text-sise-500 mt-2">最終保存: {lastSaved.toLocaleString('ja-JP')}</p>
+                                    <p className="text-xs text-dear-500 mt-2">最終保存: {lastSaved.toLocaleString('ja-JP')}</p>
                                 )}
                             </div>
                         </div>
@@ -7191,7 +7191,7 @@
                             { id: 'qr', label: 'QR表示', icon: 'qr-code' },
                         ].map(t => (
                             <button key={t.id} onClick={() => setAttTab(t.id)}
-                                className={`flex-1 flex items-center justify-center gap-1 px-3 py-2 rounded-lg text-xs font-semibold transition-all ${attTab === t.id ? 'bg-white text-sise-700 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}>
+                                className={`flex-1 flex items-center justify-center gap-1 px-3 py-2 rounded-lg text-xs font-semibold transition-all ${attTab === t.id ? 'bg-white text-dear-700 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}>
                                 <Icon name={t.icon} size={13} />{t.label}
                             </button>
                         ))}
@@ -7241,7 +7241,7 @@
                                                     <Icon name="log-in" size={20} className="inline mr-2 -mt-0.5" />GPS出勤
                                                 </button>
                                                 <button onClick={() => setShowQrScanner(true)}
-                                                    className="px-6 py-4 rounded-2xl bg-white border-2 border-slate-200 text-slate-700 font-extrabold text-base shadow-sm hover:border-sise-300 transition-all active:scale-95">
+                                                    className="px-6 py-4 rounded-2xl bg-white border-2 border-slate-200 text-slate-700 font-extrabold text-base shadow-sm hover:border-dear-300 transition-all active:scale-95">
                                                     <Icon name="qr-code" size={20} className="inline mr-2 -mt-0.5" />QR出勤
                                                 </button>
                                             </div>
@@ -7279,7 +7279,7 @@
                                                 </div>
                                                 <div className="text-center pl-3 border-l border-slate-200">
                                                     <p className="text-[10px] text-slate-400">勤務時間</p>
-                                                    <p className="text-lg font-extrabold text-sise-600">{formatMinutes(todayRecord.workMinutes || 0)}</p>
+                                                    <p className="text-lg font-extrabold text-dear-600">{formatMinutes(todayRecord.workMinutes || 0)}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -7289,9 +7289,9 @@
 
                             {/* QRスキャンモーダル */}
                             {showQrScanner && (
-                                <Card className="animate-scale-in !border-sise-300">
+                                <Card className="animate-scale-in !border-dear-300">
                                     <h4 className="font-bold text-slate-800 mb-3 flex items-center">
-                                        <Icon name="qr-code" size={18} className="mr-2 text-sise-500" />
+                                        <Icon name="qr-code" size={18} className="mr-2 text-dear-500" />
                                         QRコード出勤
                                     </h4>
                                     <p className="text-xs text-slate-500 mb-3">店舗端末に表示されたQRコードの文字列を入力してください</p>
@@ -7316,7 +7316,7 @@
                             {/* 月間サマリー */}
                             <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5">
                                 <KpiCard title="出勤日数" value={monthRecords.filter(r => r.clockIn).length + '日'} icon="calendar"
-                                    gradientFrom="from-sise-400" gradientTo="to-sise-600" />
+                                    gradientFrom="from-dear-400" gradientTo="to-dear-600" />
                                 <KpiCard title="総労働時間" value={formatMinutes(monthTotalMinutes)} icon="clock"
                                     gradientFrom="from-blue-400" gradientTo="to-blue-600" />
                                 <KpiCard title="平均勤務" value={monthRecords.length > 0 ? formatMinutes(Math.round(monthTotalMinutes / monthRecords.filter(r => r.workMinutes > 0).length) || 0) : '-'} icon="bar-chart-2"
@@ -7329,9 +7329,9 @@
                             {/* 月ナビ */}
                             <Card>
                                 <div className="flex items-center justify-between mb-4">
-                                    <button onClick={() => changeMonth(-1)} className="p-2 rounded-xl hover:bg-sise-50 text-slate-500"><Icon name="chevron-left" size={20} /></button>
+                                    <button onClick={() => changeMonth(-1)} className="p-2 rounded-xl hover:bg-dear-50 text-slate-500"><Icon name="chevron-left" size={20} /></button>
                                     <h3 className="text-lg font-bold text-slate-800">{new Date(viewMonth + '-01').toLocaleDateString('ja-JP', { year: 'numeric', month: 'long' })}</h3>
-                                    <button onClick={() => changeMonth(1)} className="p-2 rounded-xl hover:bg-sise-50 text-slate-500"><Icon name="chevron-right" size={20} /></button>
+                                    <button onClick={() => changeMonth(1)} className="p-2 rounded-xl hover:bg-dear-50 text-slate-500"><Icon name="chevron-right" size={20} /></button>
                                 </div>
                                 <div className="overflow-x-auto">
                                     <table className="w-full text-xs">
@@ -7341,7 +7341,7 @@
                                                 <th className="text-left py-2.5 px-2 text-slate-500 font-semibold">店舗</th>
                                                 <th className="text-center py-2.5 px-2 text-green-600 font-semibold">出勤</th>
                                                 <th className="text-center py-2.5 px-2 text-red-500 font-semibold">退勤</th>
-                                                <th className="text-center py-2.5 px-2 text-sise-600 font-semibold">勤務時間</th>
+                                                <th className="text-center py-2.5 px-2 text-dear-600 font-semibold">勤務時間</th>
                                                 <th className="text-center py-2.5 px-2 text-slate-400 font-semibold">方法</th>
                                             </tr>
                                         </thead>
@@ -7355,7 +7355,7 @@
                                                     <td className="py-2.5 px-2 text-slate-600">{getStoreName(r.storeId)}</td>
                                                     <td className="py-2.5 px-2 text-center font-bold text-green-600">{r.clockIn || '-'}</td>
                                                     <td className="py-2.5 px-2 text-center font-bold text-red-500">{r.clockOut || <span className="text-amber-500 text-[10px]">未退勤</span>}</td>
-                                                    <td className="py-2.5 px-2 text-center font-bold text-sise-700">{r.workMinutes > 0 ? formatMinutes(r.workMinutes) : '-'}</td>
+                                                    <td className="py-2.5 px-2 text-center font-bold text-dear-700">{r.workMinutes > 0 ? formatMinutes(r.workMinutes) : '-'}</td>
                                                     <td className="py-2.5 px-2 text-center">
                                                         <span className={`px-1.5 py-0.5 rounded text-[10px] font-bold ${r.method === 'qr' ? 'bg-purple-100 text-purple-700' : 'bg-blue-100 text-blue-700'}`}>
                                                             {r.method === 'qr' ? 'QR' : 'GPS'}
@@ -7375,7 +7375,7 @@
                         <div className="space-y-4">
                             <Card>
                                 <h4 className="font-bold text-slate-800 mb-3 flex items-center">
-                                    <Icon name="qr-code" size={18} className="mr-2 text-sise-500" />
+                                    <Icon name="qr-code" size={18} className="mr-2 text-dear-500" />
                                     店舗QRコード表示（この画面を店舗端末に表示）
                                 </h4>
                                 <p className="text-xs text-slate-500 mb-4">スタッフがこのQRコードを読み取ると出勤を記録できます。5分ごとに自動更新されます。</p>
@@ -7385,7 +7385,7 @@
                                         <div className="flex flex-wrap gap-2">
                                             {stores.map(s => (
                                                 <button key={s.id} onClick={() => startQrDisplay(s.id)}
-                                                    className="px-4 py-2.5 bg-sise-50 hover:bg-sise-100 border border-sise-200 text-sise-700 rounded-xl text-sm font-bold transition-all active:scale-95">
+                                                    className="px-4 py-2.5 bg-dear-50 hover:bg-dear-100 border border-dear-200 text-dear-700 rounded-xl text-sm font-bold transition-all active:scale-95">
                                                     <Icon name="map-pin" size={14} className="inline mr-1.5 -mt-0.5" />{s.name}
                                                 </button>
                                             ))}
@@ -7396,7 +7396,7 @@
                                         <p className="text-xs text-slate-400 mb-2">{getStoreName(qrDisplayStore)}</p>
                                         {qrDisplayData?.token ? (
                                             <>
-                                                <div className="inline-block p-6 bg-white rounded-3xl border-2 border-sise-200 shadow-lg mb-3">
+                                                <div className="inline-block p-6 bg-white rounded-3xl border-2 border-dear-200 shadow-lg mb-3">
                                                     {/* QRコードはテキストで表示（ライブラリ不要） */}
                                                     <div className="bg-slate-900 text-white font-mono text-lg px-6 py-4 rounded-xl break-all select-all"
                                                         style={{wordBreak:'break-all', letterSpacing: '1px'}}>
@@ -7407,7 +7407,7 @@
                                                     有効期限: {new Date(qrDisplayData.expiresAt).toLocaleTimeString('ja-JP')}
                                                     <span className="ml-2 text-[10px]">（5分ごとに自動更新）</span>
                                                 </p>
-                                                <p className="text-[11px] text-sise-600 font-medium mt-2">スタッフはこのコードを「QR出勤」画面で入力してください</p>
+                                                <p className="text-[11px] text-dear-600 font-medium mt-2">スタッフはこのコードを「QR出勤」画面で入力してください</p>
                                             </>
                                         ) : (
                                             <p className="text-sm text-slate-500">QRトークンを生成中...</p>
@@ -7422,7 +7422,7 @@
                             {(!currentAccess || currentAccess.role === 'manager' || currentAccess.role === 'headquarter') && (
                                 <Card>
                                     <h4 className="font-bold text-slate-800 mb-3 flex items-center">
-                                        <Icon name="map-pin" size={18} className="mr-2 text-sise-500" />
+                                        <Icon name="map-pin" size={18} className="mr-2 text-dear-500" />
                                         店舗GPS座標設定
                                     </h4>
                                     <p className="text-xs text-slate-400 mb-3">各店舗の緯度・経度を設定します。「現在地を取得」ボタンで店舗にいる時に設定できます。</p>
@@ -7576,7 +7576,7 @@
                             value={totalUsage}
                             subValue={`${activeMembers.length}名のアクティブ会員`}
                             icon="bar-chart-3"
-                            gradientFrom="from-sise-400" gradientTo="to-sise-600"
+                            gradientFrom="from-dear-400" gradientTo="to-dear-600"
                         />
                         <KpiCard
                             title="平均利用回数"
@@ -7612,13 +7612,13 @@
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 placeholder="会員名で検索..."
-                                className="w-full pl-8 pr-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-sise-400 focus:ring-2 focus:ring-sise-400/20 outline-none bg-white/80"
+                                className="w-full pl-8 pr-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-dear-400 focus:ring-2 focus:ring-dear-400/20 outline-none bg-white/80"
                             />
                         </div>
                         <select
                             value={sortBy}
                             onChange={(e) => setSortBy(e.target.value)}
-                            className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-sise-400 outline-none bg-white/80"
+                            className="px-3 py-2.5 border border-slate-200 rounded-xl text-sm focus:border-dear-400 outline-none bg-white/80"
                         >
                             <option value="renewal">更新日が近い順</option>
                             <option value="usage">利用回数が少ない順</option>
@@ -7681,7 +7681,7 @@
                                 : {
                                     zero: 'border-amber-200 bg-amber-50/20',
                                     low: 'border-slate-200 bg-white/40',
-                                    mid: 'border-sise-200 bg-sise-50/20',
+                                    mid: 'border-dear-200 bg-dear-50/20',
                                     high: 'border-emerald-200 bg-emerald-50/20',
                                 }[usageLevel];
 
@@ -7776,7 +7776,7 @@
                                                     defaultValue={count}
                                                     onBlur={(e) => { updateUsage(member.id, parseInt(e.target.value) || 0, periodKey); setEditingUsageCount(null); }}
                                                     onKeyDown={(e) => { if (e.key === 'Enter') { updateUsage(member.id, parseInt(e.target.value) || 0, periodKey); setEditingUsageCount(null); } }}
-                                                    className="w-16 text-center text-2xl font-extrabold text-slate-800 border-2 border-sise-400 rounded-lg py-1 outline-none" />
+                                                    className="w-16 text-center text-2xl font-extrabold text-slate-800 border-2 border-dear-400 rounded-lg py-1 outline-none" />
                                             ) : (
                                                 <div className="w-16 text-center cursor-pointer" onClick={() => setEditingUsageCount(member.id)} title="クリックで直接入力">
                                                     <span className="text-3xl font-extrabold text-slate-800 tabular-nums">{count}</span>
@@ -7785,7 +7785,7 @@
                                             )}
                                             <button
                                                 onClick={() => updateUsage(member.id, count + 1, periodKey)}
-                                                className="w-10 h-10 rounded-xl bg-white/80 border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-sise-50 hover:text-sise-600 hover:border-sise-200 transition-all active:scale-95"
+                                                className="w-10 h-10 rounded-xl bg-white/80 border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-dear-50 hover:text-dear-600 hover:border-dear-200 transition-all active:scale-95"
                                             >
                                                 <Icon name="plus" size={18} />
                                             </button>
@@ -7801,7 +7801,7 @@
                                                 <span className="text-[10px] font-semibold text-blue-600 bg-blue-100 px-2 py-0.5 rounded-lg">少なめ</span>
                                             )}
                                             {count > 2 && count <= 5 && (member.remaining === null || member.remaining > 0) && (
-                                                <span className="text-[10px] font-semibold text-sise-600 bg-sise-100 px-2 py-0.5 rounded-lg">通常</span>
+                                                <span className="text-[10px] font-semibold text-dear-600 bg-dear-100 px-2 py-0.5 rounded-lg">通常</span>
                                             )}
                                             {count > 5 && (member.remaining === null || member.remaining > 0) && (
                                                 <span className="text-[10px] font-semibold text-emerald-600 bg-emerald-100 px-2 py-0.5 rounded-lg">多い</span>
@@ -7850,16 +7850,16 @@
                     {/* 保存情報 */}
                     <Card className="!bg-slate-50/60">
                         <div className="flex items-start">
-                            <Icon name="info" size={18} className="text-sise-500 mr-3 mt-0.5 flex-shrink-0" />
+                            <Icon name="info" size={18} className="text-dear-500 mr-3 mt-0.5 flex-shrink-0" />
                             <div className="text-sm text-slate-600">
                                 <p className="font-semibold text-slate-700 mb-1">利用回数の記録について</p>
                                 <p>各会員の利用回数はサブスク更新日ごとの請求期間で管理されます。更新日を迎えると自動的に新しい期間にリセットされます。</p>
                                 <p className="mt-1.5">例: 15日登録の会員 → 毎月15日〜翌月14日が1期間</p>
                                 <p className="mt-1">31日登録の会員 → 2月は28日(29日)、4月は30日が更新日になります</p>
-                                <p className="mt-1.5 text-sise-600 font-medium">データは30秒ごとに自動同期されます。どのデバイスから操作しても即時反映されます。</p>
+                                <p className="mt-1.5 text-dear-600 font-medium">データは30秒ごとに自動同期されます。どのデバイスから操作しても即時反映されます。</p>
                                 <div className="flex flex-wrap gap-3 mt-2">
                                     {lastSaved && (
-                                        <p className="text-xs text-sise-500">最終保存: {lastSaved.toLocaleString('ja-JP')}</p>
+                                        <p className="text-xs text-dear-500">最終保存: {lastSaved.toLocaleString('ja-JP')}</p>
                                     )}
                                     {lastSynced && (
                                         <p className="text-xs text-blue-500">最終同期: {lastSynced.toLocaleString('ja-JP')}</p>
@@ -7991,16 +7991,16 @@
             };
 
             const StaffRow = ({ staff, inactive }) => (
-                <div className={`p-4 rounded-xl border transition-all ${inactive ? 'bg-slate-50/50 border-slate-200 opacity-60' : 'bg-white border-slate-200 hover:border-sise-200'}`}>
+                <div className={`p-4 rounded-xl border transition-all ${inactive ? 'bg-slate-50/50 border-slate-200 opacity-60' : 'bg-white border-slate-200 hover:border-dear-200'}`}>
                     <div className="flex items-start justify-between">
                         <div className="flex items-center">
-                            <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${inactive ? 'bg-slate-100 text-slate-400' : staff.role === 'headquarter' ? 'bg-violet-50 text-violet-600' : staff.role === 'manager' ? 'bg-amber-50 text-amber-600' : 'bg-sise-50 text-sise-600'}`}>
+                            <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${inactive ? 'bg-slate-100 text-slate-400' : staff.role === 'headquarter' ? 'bg-violet-50 text-violet-600' : staff.role === 'manager' ? 'bg-amber-50 text-amber-600' : 'bg-dear-50 text-dear-600'}`}>
                                 <Icon name={staff.role === 'headquarter' ? 'building' : staff.role === 'manager' ? 'shield' : 'user'} size={20} />
                             </div>
                             <div className="ml-3">
                                 <p className={`font-semibold ${inactive ? 'text-slate-400 line-through' : 'text-slate-800'}`}>{staff.name}</p>
                                 <div className="flex items-center gap-2 mt-0.5 flex-wrap">
-                                    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${inactive ? 'bg-slate-100 text-slate-400' : staff.role === 'headquarter' ? 'bg-violet-100 text-violet-700' : staff.role === 'manager' ? 'bg-amber-100 text-amber-700' : 'bg-sise-100 text-sise-700'}`}>
+                                    <span className={`text-xs px-2 py-0.5 rounded-full font-medium ${inactive ? 'bg-slate-100 text-slate-400' : staff.role === 'headquarter' ? 'bg-violet-100 text-violet-700' : staff.role === 'manager' ? 'bg-amber-100 text-amber-700' : 'bg-dear-100 text-dear-700'}`}>
                                         {staff.role === 'headquarter' ? '本部' : staff.role === 'manager' ? '店舗責任者' : 'スタッフ'}
                                     </span>
                                     {inactive && <span className="text-xs px-2 py-0.5 rounded-full bg-red-50 text-red-500 font-medium">無効</span>}
@@ -8022,7 +8022,7 @@
                             {inactive ? (
                                 <button
                                     onClick={() => handleRestore(staff.id)}
-                                    className="flex items-center px-2.5 py-1.5 rounded-lg text-xs font-medium bg-sise-50 hover:bg-sise-100 text-sise-600 transition-all"
+                                    className="flex items-center px-2.5 py-1.5 rounded-lg text-xs font-medium bg-dear-50 hover:bg-dear-100 text-dear-600 transition-all"
                                     title="復元"
                                 >
                                     <Icon name="rotate-ccw" size={14} className="mr-1" />復元
@@ -8038,7 +8038,7 @@
                                     </button>
                                     <button
                                         onClick={() => handleCopyUrl(staff)}
-                                        className={`flex items-center px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all ${copiedId === staff.id ? 'bg-green-100 text-green-700' : 'bg-slate-100 hover:bg-sise-50 text-slate-600 hover:text-sise-600'}`}
+                                        className={`flex items-center px-2.5 py-1.5 rounded-lg text-xs font-medium transition-all ${copiedId === staff.id ? 'bg-green-100 text-green-700' : 'bg-slate-100 hover:bg-dear-50 text-slate-600 hover:text-dear-600'}`}
                                         title="URLをコピー"
                                     >
                                         <Icon name={copiedId === staff.id ? 'check' : 'link'} size={14} className="mr-1" />
@@ -8063,12 +8063,12 @@
                     <div className="flex items-center justify-between mb-4">
                         <div>
                             <h3 className="text-lg font-semibold text-slate-900">スタッフ管理</h3>
-                            <p className="text-xs text-sise-500 tracking-wide mt-0.5">STAFF ACCESS MANAGEMENT</p>
+                            <p className="text-xs text-dear-500 tracking-wide mt-0.5">STAFF ACCESS MANAGEMENT</p>
                         </div>
                         {!isAdding && (
                             <button
                                 onClick={() => { setIsAdding(true); setEditingStaff(null); setFormData({ name: '', role: 'staff', password: '', storeIds: [] }); }}
-                                className="flex items-center px-3 py-2 bg-sise-500 hover:bg-sise-600 text-white rounded-xl text-sm font-medium shadow-lg shadow-sise-500/25 transition-all"
+                                className="flex items-center px-3 py-2 bg-dear-500 hover:bg-dear-600 text-white rounded-xl text-sm font-medium shadow-lg shadow-dear-500/25 transition-all"
                             >
                                 <Icon name="user-plus" size={16} className="mr-1.5" />
                                 スタッフを追加
@@ -8078,7 +8078,7 @@
 
                     {/* 追加・編集フォーム */}
                     {isAdding && (
-                        <div className="mb-6 p-4 bg-sise-50/50 rounded-xl border border-sise-200 animate-scale-in">
+                        <div className="mb-6 p-4 bg-dear-50/50 rounded-xl border border-dear-200 animate-scale-in">
                             <h4 className="font-semibold text-slate-800 mb-3">
                                 {editingStaff ? 'スタッフ編集' : '新規スタッフ追加'}
                             </h4>
@@ -8096,13 +8096,13 @@
                                         value={formData.name}
                                         onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
                                         placeholder="例: 田中太郎"
-                                        className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:border-sise-400 focus:ring-1 focus:ring-sise-400/30 outline-none"
+                                        className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:border-dear-400 focus:ring-1 focus:ring-dear-400/30 outline-none"
                                     />
                                 </div>
                                 <div>
                                     <label className="block text-sm font-medium text-slate-700 mb-1">役割</label>
                                     <div className="flex gap-2 flex-wrap">
-                                        <label className={`flex items-center px-4 py-2.5 rounded-xl border cursor-pointer transition-all ${formData.role === 'staff' ? 'bg-sise-50 border-sise-300 text-sise-700' : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'}`}>
+                                        <label className={`flex items-center px-4 py-2.5 rounded-xl border cursor-pointer transition-all ${formData.role === 'staff' ? 'bg-dear-50 border-dear-300 text-dear-700' : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'}`}>
                                             <input type="radio" name="role" value="staff" checked={formData.role === 'staff'} onChange={() => setFormData(prev => ({ ...prev, role: 'staff' }))} className="sr-only" />
                                             <Icon name="user" size={16} className="mr-2" />
                                             <div>
@@ -8110,7 +8110,7 @@
                                                 <p className="text-[10px] text-slate-400">自店舗のみ閲覧</p>
                                             </div>
                                         </label>
-                                        <label className={`flex items-center px-4 py-2.5 rounded-xl border cursor-pointer transition-all ${formData.role === 'manager' ? 'bg-sise-50 border-sise-300 text-sise-700' : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'}`}>
+                                        <label className={`flex items-center px-4 py-2.5 rounded-xl border cursor-pointer transition-all ${formData.role === 'manager' ? 'bg-dear-50 border-dear-300 text-dear-700' : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300'}`}>
                                             <input type="radio" name="role" value="manager" checked={formData.role === 'manager'} onChange={() => setFormData(prev => ({ ...prev, role: 'manager' }))} className="sr-only" />
                                             <Icon name="shield" size={16} className="mr-2" />
                                             <div>
@@ -8138,7 +8138,7 @@
                                         value={formData.password}
                                         onChange={(e) => setFormData(prev => ({ ...prev, password: e.target.value }))}
                                         placeholder="例: sise2024（空欄ならパスワードなし）"
-                                        className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:border-sise-400 focus:ring-1 focus:ring-sise-400/30 outline-none"
+                                        className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:border-dear-400 focus:ring-1 focus:ring-dear-400/30 outline-none"
                                     />
                                 </div>
                                 <div>
@@ -8154,12 +8154,12 @@
                                     {serverStores.length > 0 ? (
                                         <div className="space-y-2">
                                             {serverStores.map(store => (
-                                                <label key={store.id} className={`flex items-center px-3 py-2 rounded-lg border cursor-pointer transition-all ${formData.storeIds.includes(store.id) ? 'bg-sise-50 border-sise-300' : 'bg-white border-slate-200 hover:border-slate-300'}`}>
+                                                <label key={store.id} className={`flex items-center px-3 py-2 rounded-lg border cursor-pointer transition-all ${formData.storeIds.includes(store.id) ? 'bg-dear-50 border-dear-300' : 'bg-white border-slate-200 hover:border-slate-300'}`}>
                                                     <input
                                                         type="checkbox"
                                                         checked={formData.storeIds.includes(store.id)}
                                                         onChange={() => toggleStoreId(store.id)}
-                                                        className="w-4 h-4 text-sise-500 border-slate-300 rounded focus:ring-sise-400"
+                                                        className="w-4 h-4 text-dear-500 border-slate-300 rounded focus:ring-dear-400"
                                                     />
                                                     <span className="ml-2 text-sm text-slate-700">{store.name}</span>
                                                     <span className="ml-auto text-xs text-slate-400">ID: {store.id}</span>
@@ -8179,7 +8179,7 @@
                                                 value={formData.storeIds.join(',')}
                                                 onChange={(e) => setFormData(prev => ({ ...prev, storeIds: e.target.value.split(',').map(s => s.trim()).filter(Boolean) }))}
                                                 placeholder="例: 1,2,3"
-                                                className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:border-sise-400 outline-none"
+                                                className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:border-dear-400 outline-none"
                                             />
                                         </div>
                                     )}
@@ -8195,7 +8195,7 @@
                                 <button
                                     onClick={handleSave}
                                     disabled={!formData.name.trim() || formData.storeIds.length === 0}
-                                    className="px-4 py-2 bg-sise-500 hover:bg-sise-600 text-white rounded-xl text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                    className="px-4 py-2 bg-dear-500 hover:bg-dear-600 text-white rounded-xl text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                     {editingStaff ? '更新' : '追加'}
                                 </button>
@@ -8333,12 +8333,12 @@
                     <div className="flex items-center justify-between mb-4">
                         <div>
                             <h3 className="text-lg font-semibold text-slate-900">店舗管理</h3>
-                            <p className="text-xs text-sise-500 tracking-wide mt-0.5">STORE MANAGEMENT</p>
+                            <p className="text-xs text-dear-500 tracking-wide mt-0.5">STORE MANAGEMENT</p>
                         </div>
                         {!isAdding && (
                             <button
                                 onClick={() => { setIsAdding(true); setEditingStore(null); setFormData({ id: '', name: '', memo: '' }); }}
-                                className="flex items-center px-3 py-2 bg-sise-500 hover:bg-sise-600 text-white rounded-xl text-sm font-medium shadow-lg shadow-sise-500/25 transition-all"
+                                className="flex items-center px-3 py-2 bg-dear-500 hover:bg-dear-600 text-white rounded-xl text-sm font-medium shadow-lg shadow-dear-500/25 transition-all"
                             >
                                 <Icon name="plus" size={16} className="mr-1.5" />
                                 店舗を追加
@@ -8348,7 +8348,7 @@
 
                     {/* 追加・編集フォーム */}
                     {isAdding && (
-                        <div className="mb-6 p-4 bg-sise-50/50 rounded-xl border border-sise-200 animate-scale-in">
+                        <div className="mb-6 p-4 bg-dear-50/50 rounded-xl border border-dear-200 animate-scale-in">
                             <h4 className="font-semibold text-slate-800 mb-3">
                                 {editingStore ? '店舗編集' : '新規店舗追加'}
                             </h4>
@@ -8364,7 +8364,7 @@
                                             value={formData.id}
                                             onChange={(e) => setFormData(prev => ({ ...prev, id: e.target.value }))}
                                             placeholder="例: honatsugi（半角英数）"
-                                            className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:border-sise-400 focus:ring-1 focus:ring-sise-400/30 outline-none"
+                                            className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:border-dear-400 focus:ring-1 focus:ring-dear-400/30 outline-none"
                                         />
                                     </div>
                                 )}
@@ -8375,7 +8375,7 @@
                                         value={formData.name}
                                         onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
                                         placeholder="例: 本厚木店"
-                                        className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:border-sise-400 focus:ring-1 focus:ring-sise-400/30 outline-none"
+                                        className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:border-dear-400 focus:ring-1 focus:ring-dear-400/30 outline-none"
                                     />
                                 </div>
                                 <div>
@@ -8385,7 +8385,7 @@
                                         value={formData.memo}
                                         onChange={(e) => setFormData(prev => ({ ...prev, memo: e.target.value }))}
                                         placeholder="例: 2024年4月オープン"
-                                        className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:border-sise-400 focus:ring-1 focus:ring-sise-400/30 outline-none"
+                                        className="w-full px-3 py-2 border border-slate-200 rounded-xl text-sm focus:border-dear-400 focus:ring-1 focus:ring-dear-400/30 outline-none"
                                     />
                                 </div>
                             </div>
@@ -8399,7 +8399,7 @@
                                 <button
                                     onClick={handleSave}
                                     disabled={!formData.name.trim()}
-                                    className="px-4 py-2 bg-sise-500 hover:bg-sise-600 text-white rounded-xl text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                    className="px-4 py-2 bg-dear-500 hover:bg-dear-600 text-white rounded-xl text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                     {editingStore ? '更新' : '追加'}
                                 </button>
@@ -8437,12 +8437,12 @@
                     {activeStores.length > 0 ? (
                         <div className="space-y-2">
                             <p className="text-xs text-slate-500 font-medium">
-                                <Icon name="database" size={12} className="inline mr-1 text-sise-500" />
+                                <Icon name="database" size={12} className="inline mr-1 text-dear-500" />
                                 スプレッドシート管理店舗
                             </p>
                             {activeStores.map(store => (
-                                <div key={store.id} className="flex items-center px-4 py-3 bg-white rounded-xl border border-slate-200 hover:border-sise-200 transition-colors">
-                                    <div className="w-9 h-9 rounded-xl bg-sise-50 text-sise-600 flex items-center justify-center">
+                                <div key={store.id} className="flex items-center px-4 py-3 bg-white rounded-xl border border-slate-200 hover:border-dear-200 transition-colors">
+                                    <div className="w-9 h-9 rounded-xl bg-dear-50 text-dear-600 flex items-center justify-center">
                                         <Icon name="map-pin" size={18} />
                                     </div>
                                     <div className="ml-3 flex-1 min-w-0">
@@ -8502,7 +8502,7 @@
                                             </div>
                                             <button
                                                 onClick={() => handleRestore(store.id)}
-                                                className="flex items-center px-2.5 py-1.5 rounded-lg text-xs font-medium bg-sise-50 hover:bg-sise-100 text-sise-600 transition-all"
+                                                className="flex items-center px-2.5 py-1.5 rounded-lg text-xs font-medium bg-dear-50 hover:bg-dear-100 text-dear-600 transition-all"
                                             >
                                                 <Icon name="rotate-ccw" size={14} className="mr-1" />復元
                                             </button>
@@ -8530,7 +8530,7 @@
         // ========================================
 
         // HPBデータのlocalStorage管理
-        const HPB_STORAGE_KEY = 'sise_hpb_data';
+        const HPB_STORAGE_KEY = 'dear_hpb_data';
 
         const useMarketingData = () => {
             const [metaConfig, setMetaConfig] = useState({ configured: false, loading: true });
@@ -9096,7 +9096,7 @@
                             { id: 'reconcile', label: '売上突合', icon: 'git-merge' }
                         ].map(t => (
                             <button key={t.id} onClick={() => setCashTab(t.id)}
-                                className={`flex-1 flex items-center justify-center gap-1 px-3 py-2 rounded-lg text-xs font-semibold transition-all ${cashTab === t.id ? 'bg-white text-sise-700 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}>
+                                className={`flex-1 flex items-center justify-center gap-1 px-3 py-2 rounded-lg text-xs font-semibold transition-all ${cashTab === t.id ? 'bg-white text-dear-700 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}>
                                 <Icon name={t.icon} size={13} />{t.label}
                             </button>
                         ))}
@@ -9107,10 +9107,10 @@
                         <div className="flex items-center gap-2 flex-wrap">
                             <span className="text-xs text-slate-400 font-medium">店舗:</span>
                             <button onClick={() => setFilterStore('all')}
-                                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${filterStore === 'all' ? 'bg-sise-500 text-white shadow' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>全店舗</button>
+                                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${filterStore === 'all' ? 'bg-dear-500 text-white shadow' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>全店舗</button>
                             {activeStores.map(s => (
                                 <button key={s.id} onClick={() => setFilterStore(s.id)}
-                                    className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${filterStore === s.id ? 'bg-sise-500 text-white shadow' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>{s.name}</button>
+                                    className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${filterStore === s.id ? 'bg-dear-500 text-white shadow' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'}`}>{s.name}</button>
                             ))}
                         </div>
                     )}
@@ -9120,17 +9120,17 @@
                     {/* 全店舗残高カード（金庫・小口・レジ区分） */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
                         {/* 全体残高 */}
-                        <div className="glass-card !rounded-2xl p-4 border-2 border-sise-200 bg-gradient-to-br from-sise-50 to-white">
+                        <div className="glass-card !rounded-2xl p-4 border-2 border-dear-200 bg-gradient-to-br from-dear-50 to-white">
                             <div className="flex items-center justify-between mb-2">
-                                <span className="text-xs font-semibold text-sise-600 flex items-center"><Icon name="wallet" size={14} className="mr-1" /> 現金合計</span>
+                                <span className="text-xs font-semibold text-dear-600 flex items-center"><Icon name="wallet" size={14} className="mr-1" /> 現金合計</span>
                                 <button onClick={() => { setShowCashCheck(true); setCashCheckStore('all'); }}
-                                    className="text-[11px] bg-sise-100 text-sise-700 px-2 py-1 rounded-lg font-semibold hover:bg-sise-200 transition-colors">
+                                    className="text-[11px] bg-dear-100 text-dear-700 px-2 py-1 rounded-lg font-semibold hover:bg-dear-200 transition-colors">
                                     <Icon name="check-circle" size={12} className="inline mr-0.5 -mt-0.5" />チェック
                                 </button>
                             </div>
                             <p className="text-2xl font-extrabold text-slate-800">{formatCurrency(cashBalance.total)}</p>
                             <div className="flex gap-3 mt-2 text-[11px]">
-                                <span className="text-sise-600">月入金: <strong>{formatCurrency(monthSummary.cashIn)}</strong></span>
+                                <span className="text-dear-600">月入金: <strong>{formatCurrency(monthSummary.cashIn)}</strong></span>
                                 <span className="text-red-500">月出金: <strong>{formatCurrency(monthSummary.cashOut)}</strong></span>
                             </div>
                         </div>
@@ -9159,7 +9159,7 @@
                         {Object.entries(cashBalance.byStore).map(([storeId, data]) => {
                             const storeClose = dailyCloses.find(c => c.storeId === storeId && c.date === new Date().toISOString().slice(0, 10));
                             return (
-                            <div key={storeId} className={`glass-card !rounded-2xl p-4 cursor-pointer transition-all ${filterStore === storeId ? 'border-2 border-sise-400 bg-sise-50/30' : 'border border-slate-200 hover:border-sise-200'}`}
+                            <div key={storeId} className={`glass-card !rounded-2xl p-4 cursor-pointer transition-all ${filterStore === storeId ? 'border-2 border-dear-400 bg-dear-50/30' : 'border border-slate-200 hover:border-dear-200'}`}
                                 onClick={() => setFilterStore(filterStore === storeId ? 'all' : storeId)}>
                                 <div className="flex items-center justify-between mb-2">
                                     <span className="text-xs font-semibold text-slate-600 flex items-center">
@@ -9341,7 +9341,7 @@
                     {/* KPI（現金管理向け） */}
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-2.5 md:gap-4">
                         <KpiCard title="月間入金（現金）" value={formatCurrency(monthSummary.cashIn)} icon="arrow-down-left"
-                            gradientFrom="from-sise-400" gradientTo="to-sise-600"
+                            gradientFrom="from-dear-400" gradientTo="to-dear-600"
                             subValue={`全決済: ${formatCurrency(monthSummary.income)}`} />
                         <KpiCard title="月間出金（現金）" value={formatCurrency(monthSummary.cashOut)} icon="arrow-up-right"
                             gradientFrom="from-red-400" gradientTo="to-red-600"
@@ -9357,16 +9357,16 @@
 
                     {/* 記帳フォーム */}
                     {showForm && (
-                        <Card className="animate-scale-in !border-sise-200">
+                        <Card className="animate-scale-in !border-dear-200">
                             <h4 className="font-bold text-slate-800 mb-4 flex items-center">
-                                <Icon name={editingId ? 'edit' : 'plus-circle'} size={18} className="mr-2 text-sise-500" />
+                                <Icon name={editingId ? 'edit' : 'plus-circle'} size={18} className="mr-2 text-dear-500" />
                                 {editingId ? '記録を編集' : '新しい記録を追加'}
                             </h4>
 
                             {/* 収入/支出切替 */}
                             <div className="flex gap-2 mb-4">
                                 <button onClick={() => setFormData(p => ({...p, type: 'income', category: '施術売上'}))}
-                                    className={`flex-1 py-2.5 rounded-xl border-2 font-semibold text-sm transition-all ${formData.type === 'income' ? 'bg-sise-50 border-sise-400 text-sise-700' : 'bg-white border-slate-200 text-slate-500 hover:border-slate-300'}`}>
+                                    className={`flex-1 py-2.5 rounded-xl border-2 font-semibold text-sm transition-all ${formData.type === 'income' ? 'bg-dear-50 border-dear-400 text-dear-700' : 'bg-white border-slate-200 text-slate-500 hover:border-slate-300'}`}>
                                     <Icon name="arrow-down-left" size={14} className="inline mr-1 -mt-0.5" /> 入金
                                 </button>
                                 <button onClick={() => setFormData(p => ({...p, type: 'expense', category: '消耗品'}))}
@@ -9405,12 +9405,12 @@
                                     <div>
                                         <label className="block text-xs font-medium text-slate-600 mb-1">
                                             メニュー / クーポン
-                                            <button onClick={() => setShowMenuManager(true)} className="ml-2 text-[10px] text-sise-600 hover:text-sise-700 font-bold">
+                                            <button onClick={() => setShowMenuManager(true)} className="ml-2 text-[10px] text-dear-600 hover:text-dear-700 font-bold">
                                                 <Icon name="settings" size={10} className="inline -mt-0.5 mr-0.5" />管理
                                             </button>
                                         </label>
                                         <select value={formData.selectedMenuId} onChange={e => handleMenuSelect(e.target.value)}
-                                            className="w-full px-3 py-2.5 border border-sise-200 rounded-xl text-sm outline-none bg-sise-50/30">
+                                            className="w-full px-3 py-2.5 border border-dear-200 rounded-xl text-sm outline-none bg-dear-50/30">
                                             <option value="">-- 手動入力 --</option>
                                             {(menuItemsHook?.activeMenus || []).length > 0 && (
                                                 <optgroup label="メニュー">
@@ -9490,7 +9490,7 @@
                             {formData.type === 'income' && (!menuItemsHook?.activeMenus?.length && !menuItemsHook?.activeCoupons?.length) && (
                                 <div className="mt-3 p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-center justify-between">
                                     <span className="text-xs text-slate-500">メニューを登録するとプルダウンから選択でき、金額が自動反映されます</span>
-                                    <button onClick={() => setShowMenuManager(true)} className="text-xs text-sise-600 font-bold hover:text-sise-700 whitespace-nowrap ml-2">
+                                    <button onClick={() => setShowMenuManager(true)} className="text-xs text-dear-600 font-bold hover:text-dear-700 whitespace-nowrap ml-2">
                                         <Icon name="plus" size={12} className="inline -mt-0.5 mr-0.5" />メニュー登録
                                     </button>
                                 </div>
@@ -9509,10 +9509,10 @@
 
                     {/* メニュー管理モーダル */}
                     {showMenuManager && (
-                        <Card className="animate-scale-in !border-sise-200">
+                        <Card className="animate-scale-in !border-dear-200">
                             <div className="flex items-center justify-between mb-4">
                                 <h4 className="font-bold text-slate-800 flex items-center">
-                                    <Icon name="clipboard-list" size={18} className="mr-2 text-sise-500" />
+                                    <Icon name="clipboard-list" size={18} className="mr-2 text-dear-500" />
                                     メニュー・クーポン管理
                                 </h4>
                                 <button onClick={() => { setShowMenuManager(false); setEditingMenuId(null); setMenuForm({ name: '', category: '', price: '', itemType: 'menu' }); }}
@@ -9560,9 +9560,9 @@
                             {/* メニュー一覧 */}
                             <div className="space-y-1.5 max-h-64 overflow-y-auto">
                                 {(menuItemsHook?.menuItems || []).filter(m => m.active).map(item => (
-                                    <div key={item.id} className="flex items-center justify-between p-2.5 bg-white rounded-lg border border-slate-100 hover:border-sise-200 transition-colors">
+                                    <div key={item.id} className="flex items-center justify-between p-2.5 bg-white rounded-lg border border-slate-100 hover:border-dear-200 transition-colors">
                                         <div className="flex items-center gap-2">
-                                            <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${item.itemType === 'coupon' ? 'bg-amber-100 text-amber-700' : 'bg-sise-100 text-sise-700'}`}>
+                                            <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${item.itemType === 'coupon' ? 'bg-amber-100 text-amber-700' : 'bg-dear-100 text-dear-700'}`}>
                                                 {item.itemType === 'coupon' ? 'クーポン' : 'メニュー'}
                                             </span>
                                             <span className="text-sm font-medium text-slate-700">{item.name}</span>
@@ -9570,7 +9570,7 @@
                                         <div className="flex items-center gap-2">
                                             <span className="text-sm font-bold text-slate-800">{formatCurrency(item.price)}</span>
                                             <button onClick={() => { setEditingMenuId(item.id); setMenuForm({ name: item.name, category: item.category, price: String(item.price), itemType: item.itemType }); }}
-                                                className="text-slate-400 hover:text-sise-600 transition-colors"><Icon name="edit" size={14} /></button>
+                                                className="text-slate-400 hover:text-dear-600 transition-colors"><Icon name="edit" size={14} /></button>
                                             <button onClick={() => { if (confirm(item.name + 'を削除しますか？')) menuItemsHook.deleteItem(item.id); }}
                                                 className="text-slate-400 hover:text-red-500 transition-colors"><Icon name="trash-2" size={14} /></button>
                                         </div>
@@ -9586,7 +9586,7 @@
                     {/* 月間ナビゲーション */}
                     <Card>
                         <div className="flex items-center justify-between mb-4">
-                            <button onClick={() => changeMonth(-1)} className="p-2 rounded-xl hover:bg-sise-50 text-slate-500 transition-colors active:scale-90">
+                            <button onClick={() => changeMonth(-1)} className="p-2 rounded-xl hover:bg-dear-50 text-slate-500 transition-colors active:scale-90">
                                 <Icon name="chevron-left" size={20} />
                             </button>
                             <div className="text-center">
@@ -9595,7 +9595,7 @@
                                 </h3>
                                 <p className="text-xs text-slate-400">{monthEntries.length}件の記録</p>
                             </div>
-                            <button onClick={() => changeMonth(1)} className="p-2 rounded-xl hover:bg-sise-50 text-slate-500 transition-colors active:scale-90">
+                            <button onClick={() => changeMonth(1)} className="p-2 rounded-xl hover:bg-dear-50 text-slate-500 transition-colors active:scale-90">
                                 <Icon name="chevron-right" size={20} />
                             </button>
                         </div>
@@ -9604,11 +9604,11 @@
                         <div className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl mb-4">
                             <div className="flex-1">
                                 <div className="flex justify-between text-xs mb-1">
-                                    <span className="text-sise-600 font-semibold">入金</span>
-                                    <span className="font-bold text-sise-700">{formatCurrency(monthSummary.income)}</span>
+                                    <span className="text-dear-600 font-semibold">入金</span>
+                                    <span className="font-bold text-dear-700">{formatCurrency(monthSummary.income)}</span>
                                 </div>
                                 <div className="h-2 bg-slate-200 rounded-full overflow-hidden">
-                                    <div className="h-full bg-gradient-to-r from-sise-400 to-sise-500 rounded-full transition-all duration-500"
+                                    <div className="h-full bg-gradient-to-r from-dear-400 to-dear-500 rounded-full transition-all duration-500"
                                         style={{width: `${monthSummary.income + monthSummary.expense > 0 ? (monthSummary.income / (monthSummary.income + monthSummary.expense)) * 100 : 0}%`}}></div>
                                 </div>
                             </div>
@@ -9661,7 +9661,7 @@
                                                 )}
                                             </div>
                                             <div className="flex items-center gap-3 text-xs">
-                                                {daySummary.income > 0 && <span className="font-bold text-sise-600">+{formatCurrency(daySummary.income)}</span>}
+                                                {daySummary.income > 0 && <span className="font-bold text-dear-600">+{formatCurrency(daySummary.income)}</span>}
                                                 {daySummary.expense > 0 && <span className="font-bold text-red-500">-{formatCurrency(daySummary.expense)}</span>}
                                             </div>
                                         </div>
@@ -9669,10 +9669,10 @@
                                         {/* エントリーリスト */}
                                         <div className="space-y-1">
                                             {dayEntries.map(entry => (
-                                                <div key={entry.id} className="flex items-center p-2.5 rounded-xl border border-slate-100 hover:border-sise-200 bg-white/60 group transition-all">
+                                                <div key={entry.id} className="flex items-center p-2.5 rounded-xl border border-slate-100 hover:border-dear-200 bg-white/60 group transition-all">
                                                     {/* アイコン */}
                                                     <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                                                        entry.type === 'income' ? 'bg-sise-50 text-sise-600' : 'bg-red-50 text-red-500'
+                                                        entry.type === 'income' ? 'bg-dear-50 text-dear-600' : 'bg-red-50 text-red-500'
                                                     }`}>
                                                         <Icon name={
                                                             entry.category === '施術売上' ? 'activity' :
@@ -9705,7 +9705,7 @@
 
                                                     {/* 金額 */}
                                                     <div className="flex items-center gap-1.5 ml-2">
-                                                        <span className={`text-sm font-bold ${entry.type === 'income' ? 'text-sise-700' : 'text-red-600'}`}>
+                                                        <span className={`text-sm font-bold ${entry.type === 'income' ? 'text-dear-700' : 'text-red-600'}`}>
                                                             {entry.type === 'income' ? '+' : '-'}{formatCurrency(entry.amount)}
                                                         </span>
                                                         <span className={`text-[11px] px-1.5 py-0.5 rounded font-semibold ${
@@ -9753,21 +9753,21 @@
                     {monthEntries.length > 0 && (
                         <Card>
                             <h4 className="font-bold text-slate-800 mb-3 flex items-center">
-                                <Icon name="pie-chart" size={16} className="mr-2 text-sise-500" />
+                                <Icon name="pie-chart" size={16} className="mr-2 text-dear-500" />
                                 カテゴリ別集計
                             </h4>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 {/* 入金 */}
                                 <div>
-                                    <p className="text-xs font-semibold text-sise-600 mb-2">入金</p>
+                                    <p className="text-xs font-semibold text-dear-600 mb-2">入金</p>
                                     <div className="space-y-1.5">
                                         {Object.entries(monthSummary.byCategory)
                                             .filter(([cat]) => incomeCategories.includes(cat))
                                             .sort((a, b) => b[1] - a[1])
                                             .map(([cat, amount]) => (
-                                                <div key={cat} className="flex items-center justify-between p-2 bg-sise-50/40 rounded-lg">
+                                                <div key={cat} className="flex items-center justify-between p-2 bg-dear-50/40 rounded-lg">
                                                     <span className="text-xs font-medium text-slate-700">{cat}</span>
-                                                    <span className="text-xs font-bold text-sise-700">{formatCurrency(amount)}</span>
+                                                    <span className="text-xs font-bold text-dear-700">{formatCurrency(amount)}</span>
                                                 </div>
                                             ))}
                                         {Object.entries(monthSummary.byCategory).filter(([c]) => incomeCategories.includes(c)).length === 0 && (
@@ -9802,7 +9802,7 @@
                     {cashTab === 'audit' && (
                         <Card>
                             <h4 className="font-bold text-slate-800 mb-3 flex items-center">
-                                <Icon name="shield" size={16} className="mr-2 text-sise-500" />
+                                <Icon name="shield" size={16} className="mr-2 text-dear-500" />
                                 操作ログ（監査証跡）
                             </h4>
                             <p className="text-xs text-slate-400 mb-4">出納帳の全操作はスプレッドシートに記録されます。誰が、いつ、何を操作したかを追跡できます。</p>
@@ -9859,7 +9859,7 @@
                     {cashTab === 'reconcile' && (
                         <Card>
                             <h4 className="font-bold text-slate-800 mb-3 flex items-center">
-                                <Icon name="git-merge" size={16} className="mr-2 text-sise-500" />
+                                <Icon name="git-merge" size={16} className="mr-2 text-dear-500" />
                                 Square売上突合
                             </h4>
                             <p className="text-xs text-slate-400 mb-4">Squareの決済データと出納帳の入金記録を照合し、差異を確認できます。</p>
@@ -9872,10 +9872,10 @@
                                             <p className="text-xl font-extrabold text-purple-700">{formatCurrency(squareReconciliation.squareTotal)}</p>
                                             <p className="text-[10px] text-purple-400 mt-1">{squareReconciliation.count}件の決済</p>
                                         </div>
-                                        <div className="p-4 bg-sise-50 border border-sise-200 rounded-xl text-center">
-                                            <p className="text-xs text-sise-500 font-medium mb-1">出納帳入金（本日）</p>
-                                            <p className="text-xl font-extrabold text-sise-700">{formatCurrency(squareReconciliation.cashbookTotal)}</p>
-                                            <p className="text-[10px] text-sise-400 mt-1">{entries.filter(e => e.date === squareReconciliation.date && e.type === 'income').length}件の記録</p>
+                                        <div className="p-4 bg-dear-50 border border-dear-200 rounded-xl text-center">
+                                            <p className="text-xs text-dear-500 font-medium mb-1">出納帳入金（本日）</p>
+                                            <p className="text-xl font-extrabold text-dear-700">{formatCurrency(squareReconciliation.cashbookTotal)}</p>
+                                            <p className="text-[10px] text-dear-400 mt-1">{entries.filter(e => e.date === squareReconciliation.date && e.type === 'income').length}件の記録</p>
                                         </div>
                                         <div className={`p-4 border rounded-xl text-center ${
                                             squareReconciliation.diff === 0 ? 'bg-green-50 border-green-200' :
@@ -10806,7 +10806,7 @@
                                 </div>
                                 <div className="flex items-end gap-2">
                                     <button onClick={handleHpbSubmit}
-                                        className="px-4 py-1.5 bg-sise-600 text-white rounded text-sm hover:bg-sise-700 transition-colors">
+                                        className="px-4 py-1.5 bg-dear-600 text-white rounded text-sm hover:bg-dear-700 transition-colors">
                                         {hpbEditingMonth ? '更新' : '登録'}
                                     </button>
                                     {hpbEditingMonth && (
@@ -10855,7 +10855,7 @@
                                                         <td className="text-right py-2 px-3 font-mono">{m.coupons || 0}</td>
                                                         <td className="text-center py-2 px-3">
                                                             <div className="flex gap-1 justify-center">
-                                                                <button onClick={() => startEdit(m)} className="p-1 text-sise-600 hover:bg-sise-50 rounded dark:hover:bg-gray-700" title="編集">
+                                                                <button onClick={() => startEdit(m)} className="p-1 text-dear-600 hover:bg-dear-50 rounded dark:hover:bg-gray-700" title="編集">
                                                                     <Icon name="pencil" size={14} />
                                                                 </button>
                                                                 <button onClick={() => { if (confirm(`${m.yearMonth}のデータを削除しますか？`)) deleteHpbMonth(m.yearMonth); }}
@@ -10873,7 +10873,7 @@
 
                                 {/* 最適化提案 */}
                                 {latestMonth && (
-                                    <div className="mt-4 p-4 bg-sise-50 dark:bg-gray-800 rounded-lg">
+                                    <div className="mt-4 p-4 bg-dear-50 dark:bg-gray-800 rounded-lg">
                                         <h4 className="font-semibold text-sm mb-2 flex items-center gap-1">
                                             <Icon name="lightbulb" size={14} /> 最適化提案
                                         </h4>
@@ -10946,7 +10946,7 @@
                                 <option value="last_90d">過去90日</option>
                             </select>
                             <button onClick={() => fetchMetaInsights(metaDatePreset)}
-                                className="px-3 py-1.5 bg-sise-600 text-white rounded text-sm hover:bg-sise-700 transition-colors flex items-center gap-1"
+                                className="px-3 py-1.5 bg-dear-600 text-white rounded text-sm hover:bg-dear-700 transition-colors flex items-center gap-1"
                                 disabled={metaData.loading}>
                                 <Icon name="refresh-cw" size={14} className={metaData.loading ? 'animate-spin' : ''} />
                                 更新
@@ -11095,7 +11095,7 @@
                         {/* 操作バー */}
                         <div className="flex items-center gap-3">
                             <button onClick={() => fetchTiktokInsights()}
-                                className="px-3 py-1.5 bg-sise-600 text-white rounded text-sm hover:bg-sise-700 transition-colors flex items-center gap-1"
+                                className="px-3 py-1.5 bg-dear-600 text-white rounded text-sm hover:bg-dear-700 transition-colors flex items-center gap-1"
                                 disabled={tiktokData.loading}>
                                 <Icon name="refresh-cw" size={14} className={tiktokData.loading ? 'animate-spin' : ''} />
                                 今月のデータ取得
@@ -11261,7 +11261,7 @@
                                 onClick={() => setActiveTab(tab.id)}
                                 className={`flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl text-sm font-semibold transition-all duration-200 ${
                                     activeTab === tab.id
-                                        ? 'bg-white dark:bg-sise-900/60 text-sise-700 dark:text-sise-400 shadow-md shadow-sise-500/10'
+                                        ? 'bg-white dark:bg-dear-900/60 text-dear-700 dark:text-dear-400 shadow-md shadow-dear-500/10'
                                         : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-white/50 dark:hover:bg-slate-700/50 active:scale-95'
                                 }`}
                             >
@@ -11480,7 +11480,7 @@
                     type: 'box', layout: 'vertical', paddingAll: '20px',
                     backgroundColor: '#f2f8f5',
                     contents: [
-                        { type: 'text', text: "si'se", size: 'xl', weight: 'bold', color: '#52856d', align: 'center' },
+                        { type: 'text', text: "Dear", size: 'xl', weight: 'bold', color: '#52856d', align: 'center' },
                         { type: 'text', text: 'Personal After Care Sheet', size: 'xxs', weight: 'bold', color: '#6ca88a', align: 'center', margin: 'md' },
                         { type: 'text', text: displayName, size: 'xl', weight: 'bold', color: '#333333', align: 'center', margin: 'sm' },
                         { type: 'text', text: displayDate, size: 'xs', color: '#9cc7b1', align: 'center', margin: 'xs' },
@@ -11627,7 +11627,7 @@
                         aspectMode: 'fit', aspectRatio: '1:1',
                         margin: 'xl',
                     }] : [{
-                        type: 'text', text: "si'se", size: 'xxl', weight: 'bold', color: '#52856d', align: 'center', margin: 'xl',
+                        type: 'text', text: "Dear", size: 'xxl', weight: 'bold', color: '#52856d', align: 'center', margin: 'xl',
                     }]),
                 ],
             };
@@ -11886,7 +11886,7 @@
                     type: 'box', layout: 'vertical', paddingAll: '20px',
                     backgroundColor: '#04342C',
                     contents: [
-                        { type: 'text', text: "si'se 姿勢分析レポート", size: 'sm', weight: 'bold', color: '#5DCAA5', align: 'center' },
+                        { type: 'text', text: "Dear 姿勢分析レポート", size: 'sm', weight: 'bold', color: '#5DCAA5', align: 'center' },
                         { type: 'text', text: 'Posture Analysis Report', size: 'xxs', color: '#5DCAA580', align: 'center', margin: 'xs' },
                         { type: 'separator', color: '#5DCAA530', margin: 'lg' },
                         { type: 'text', text: displayName, size: 'xl', weight: 'bold', color: '#ffffff', align: 'center', margin: 'md' },
@@ -12789,7 +12789,7 @@
                 header: {
                     type: 'box', layout: 'vertical', paddingAll: '20px', backgroundColor: '#04342C',
                     contents: [
-                        { type: 'text', text: "si'se 姿勢分析レポート", size: 'sm', weight: 'bold', color: '#5DCAA5', align: 'center' },
+                        { type: 'text', text: "Dear 姿勢分析レポート", size: 'sm', weight: 'bold', color: '#5DCAA5', align: 'center' },
                         { type: 'text', text: 'Before / After 比較', size: 'xxs', color: '#5DCAA580', align: 'center', margin: 'xs' },
                         { type: 'separator', color: '#5DCAA530', margin: 'lg' },
                         { type: 'text', text: displayName, size: 'xl', weight: 'bold', color: '#ffffff', align: 'center', margin: 'md' },
@@ -16027,7 +16027,7 @@
                             </div>
                             <div className="cf-concept-block solution">
                                 <div className="cf-concept-block-label">
-                                    <div className="cf-concept-block-title">si'se なら、すべて解決</div>
+                                    <div className="cf-concept-block-title">Dear なら、すべて解決</div>
                                     <div className="cf-concept-block-badge">ワンストップで対応</div>
                                 </div>
                                 <div className="cf-sol-wrap">
@@ -16042,7 +16042,7 @@
                         </div>
                         <div className="cf-conclusion-card">
                             <div className="cf-conclusion-title">どの段階のお悩みでも、根本から改善し維持できる</div>
-                            <div className="cf-conclusion-sub">一般的なサロンは各段階の「対処」だけ。si'seは全段階＋根本原因をまとめてケアします。</div>
+                            <div className="cf-conclusion-sub">一般的なサロンは各段階の「対処」だけ。Dearは全段階＋根本原因をまとめてケアします。</div>
                         </div>
                     </div>
                 </div>
@@ -16134,7 +16134,7 @@
                         })()}
                         <div style={{width:1,height:24,background:'#e2e8f0',flexShrink:0}}></div>
                         <div style={{display:'flex',alignItems:'center',gap:4,minWidth:0,flex:1}}>
-                            <Icon name="search" size={16} className="text-sise-500" style={{flexShrink:0}} />
+                            <Icon name="search" size={16} className="text-dear-500" style={{flexShrink:0}} />
                             <input
                                 type="text"
                                 placeholder="お客様名で検索..."
@@ -16499,7 +16499,7 @@
 
                                     {qrFetchingPlans ? (
                                         <div style={{textAlign:'center',padding:'20px 0'}}>
-                                            <Icon name="loader" size={20} className="animate-spin text-sise-500" />
+                                            <Icon name="loader" size={20} className="animate-spin text-dear-500" />
                                             <p style={{fontSize:12,color:'#999',marginTop:8}}>Squareプランを読み込み中...</p>
                                         </div>
                                     ) : qrPlans.length === 0 && !qrLink ? (
@@ -16622,7 +16622,7 @@
 
                     {/* プラン選びのポイント */}
                     <div className="cf-note-box">
-                        <h4><Icon name="info" size={16} className="text-sise-500" /> プラン選びのポイント</h4>
+                        <h4><Icon name="info" size={16} className="text-dear-500" /> プラン選びのポイント</h4>
                         <p><strong>3ヶ月続ければ、身体は確実に変わります。</strong>まずはここを目標にしてください。<br/>安定期以降は<strong>月2回の継続</strong>が最もバランスが良く、効果を高いまま維持できます。<br/>離脱するよりは<strong>月1回でも継続する</strong>ことが大切です。</p>
                     </div>
                 </div>
@@ -16871,7 +16871,7 @@
         const SettingsView = ({ onSettingsSaved }) => {
             const [squareStatus, setSquareStatus] = useState({ loading: true });
             const [unifiedGasUrl, setUnifiedGasUrl] = useState(() => {
-                const stored = localStorage.getItem('sise_unified_gas_url');
+                const stored = localStorage.getItem('dear_unified_gas_url');
                 return (stored && stored !== 'YOUR_UNIFIED_GAS_URL') ? stored : '';
             });
             // サーバーの接続状態を取得
@@ -16883,16 +16883,16 @@
 
             const handleSaveGas = () => {
                 if (unifiedGasUrl && unifiedGasUrl.trim()) {
-                    localStorage.setItem('sise_unified_gas_url', unifiedGasUrl.trim());
+                    localStorage.setItem('dear_unified_gas_url', unifiedGasUrl.trim());
                 } else {
-                    localStorage.removeItem('sise_unified_gas_url');
+                    localStorage.removeItem('dear_unified_gas_url');
                 }
                 showToast('統合GAS URLを保存しました。リロードで全機能に反映されます。', 'success');
                 if (onSettingsSaved) onSettingsSaved();
             };
 
             const handleResetGas = () => {
-                localStorage.removeItem('sise_unified_gas_url');
+                localStorage.removeItem('dear_unified_gas_url');
                 setUnifiedGasUrl('');
                 UNIFIED_GAS_URL = DEFAULT_GAS_URL;
                 showToast('GAS URLをデフォルトにリセットしました。', 'success');
@@ -16968,15 +16968,15 @@
                                     <p className="text-xs font-semibold text-slate-700 mb-2">単一店舗の場合:</p>
                                     <div className="space-y-2 font-mono text-xs mb-4">
                                         <div className="flex items-center p-2 bg-white rounded border border-slate-200">
-                                            <span className="text-sise-600 font-semibold w-64">SQUARE_ACCESS_TOKEN</span>
+                                            <span className="text-dear-600 font-semibold w-64">SQUARE_ACCESS_TOKEN</span>
                                             <span className="text-slate-500">= sq0atp-... or EAAA...</span>
                                         </div>
                                         <div className="flex items-center p-2 bg-white rounded border border-slate-200">
-                                            <span className="text-sise-600 font-semibold w-64">SQUARE_LOCATION_ID</span>
+                                            <span className="text-dear-600 font-semibold w-64">SQUARE_LOCATION_ID</span>
                                             <span className="text-slate-500">= L...</span>
                                         </div>
                                         <div className="flex items-center p-2 bg-white rounded border border-slate-200">
-                                            <span className="text-sise-600 font-semibold w-64">SQUARE_ENVIRONMENT</span>
+                                            <span className="text-dear-600 font-semibold w-64">SQUARE_ENVIRONMENT</span>
                                             <span className="text-slate-500">= production（本番）or sandbox（テスト）</span>
                                         </div>
                                     </div>
@@ -16984,15 +16984,15 @@
                                     <p className="text-xs font-semibold text-slate-700 mb-2">複数店舗の場合（店舗ごとに番号を付与）:</p>
                                     <div className="space-y-2 font-mono text-xs">
                                         <div className="flex items-center p-2 bg-white rounded border border-slate-200">
-                                            <span className="text-sise-600 font-semibold w-64">SQUARE_STORE_1_NAME</span>
+                                            <span className="text-dear-600 font-semibold w-64">SQUARE_STORE_1_NAME</span>
                                             <span className="text-slate-500">= 店舗1の名前</span>
                                         </div>
                                         <div className="flex items-center p-2 bg-white rounded border border-slate-200">
-                                            <span className="text-sise-600 font-semibold w-64">SQUARE_STORE_1_ACCESS_TOKEN</span>
+                                            <span className="text-dear-600 font-semibold w-64">SQUARE_STORE_1_ACCESS_TOKEN</span>
                                             <span className="text-slate-500">= 店舗1のトークン</span>
                                         </div>
                                         <div className="flex items-center p-2 bg-white rounded border border-slate-200">
-                                            <span className="text-sise-600 font-semibold w-64">SQUARE_STORE_1_LOCATION_ID</span>
+                                            <span className="text-dear-600 font-semibold w-64">SQUARE_STORE_1_LOCATION_ID</span>
                                             <span className="text-slate-500">= 店舗1のロケーションID</span>
                                         </div>
                                         <div className="flex items-center p-2 bg-slate-100 rounded border border-slate-200">
@@ -17010,7 +17010,7 @@
                         <div className="space-y-5">
                             <div>
                                 <label className="block text-sm font-semibold text-slate-700 mb-2">
-                                    <Icon name="database" size={16} className="inline mr-2 text-sise-500" />
+                                    <Icon name="database" size={16} className="inline mr-2 text-dear-500" />
                                     統合 GAS URL
                                 </label>
                                 <div className="flex gap-2">
@@ -17018,7 +17018,7 @@
                                         type="url"
                                         value={unifiedGasUrl}
                                         onChange={(e) => setUnifiedGasUrl(e.target.value)}
-                                        className="flex-1 px-4 py-2.5 border border-slate-200 rounded-xl focus:border-sise-500 focus:ring-2 focus:ring-sise-500/20 outline-none text-sm"
+                                        className="flex-1 px-4 py-2.5 border border-slate-200 rounded-xl focus:border-dear-500 focus:ring-2 focus:ring-dear-500/20 outline-none text-sm"
                                         placeholder="https://script.google.com/macros/s/..."
                                     />
                                     <button
@@ -17051,7 +17051,7 @@
                                     </div>
                                     {['本厚木店', '大和店', '横浜店', '町田店', '川口店'].map(store => (
                                         <div key={store} className="flex items-center gap-2 p-2 bg-white rounded border border-slate-200">
-                                            <Icon name="heart-handshake" size={14} className="text-sise-500" />
+                                            <Icon name="heart-handshake" size={14} className="text-dear-500" />
                                             <span className="font-semibold text-slate-700 w-48">カウンセリング回答_{store}</span>
                                             <span className="text-slate-500">Googleフォーム回答（読み取り専用）</span>
                                         </div>
@@ -17082,32 +17082,32 @@
                     <Card>
                         <details className="group">
                             <summary className="flex items-center cursor-pointer list-none select-none">
-                                <Icon name="book-open" size={20} className="text-sise-500 mr-3" />
+                                <Icon name="book-open" size={20} className="text-dear-500 mr-3" />
                                 <h3 className="text-lg font-semibold text-slate-900 flex-1">GAS セットアップガイド</h3>
                                 <Icon name="chevron-down" size={18} className="text-slate-400 transition-transform duration-200 group-open:rotate-180" />
                             </summary>
                             <div className="mt-5 space-y-6">
                                 {/* Step 1 */}
-                                <div className="relative pl-8 border-l-2 border-sise-200 pb-5">
-                                    <div className="absolute left-0 -translate-x-1/2 w-7 h-7 rounded-full bg-gradient-to-br from-sise-500 to-sise-600 text-white flex items-center justify-center text-xs font-bold shadow-sm">1</div>
+                                <div className="relative pl-8 border-l-2 border-dear-200 pb-5">
+                                    <div className="absolute left-0 -translate-x-1/2 w-7 h-7 rounded-full bg-gradient-to-br from-dear-500 to-dear-600 text-white flex items-center justify-center text-xs font-bold shadow-sm">1</div>
                                     <h4 className="font-bold text-slate-800 mb-2">スプレッドシートを作成</h4>
-                                    <p className="text-sm text-slate-600 mb-3">Google ドライブで新しいスプレッドシートを作成します。名前は「si'se 統合管理」などわかりやすいものにしてください。</p>
+                                    <p className="text-sm text-slate-600 mb-3">Google ドライブで新しいスプレッドシートを作成します。名前は「Dear 統合管理」などわかりやすいものにしてください。</p>
                                 </div>
 
                                 {/* Step 2 */}
-                                <div className="relative pl-8 border-l-2 border-sise-200 pb-5">
-                                    <div className="absolute left-0 -translate-x-1/2 w-7 h-7 rounded-full bg-gradient-to-br from-sise-500 to-sise-600 text-white flex items-center justify-center text-xs font-bold shadow-sm">2</div>
+                                <div className="relative pl-8 border-l-2 border-dear-200 pb-5">
+                                    <div className="absolute left-0 -translate-x-1/2 w-7 h-7 rounded-full bg-gradient-to-br from-dear-500 to-dear-600 text-white flex items-center justify-center text-xs font-bold shadow-sm">2</div>
                                     <h4 className="font-bold text-slate-800 mb-2">Googleフォームの回答先を設定</h4>
                                     <p className="text-sm text-slate-600 mb-3">以下の2種類のフォームの回答先を、作成したスプレッドシートに設定します。</p>
                                     <div className="bg-slate-50 rounded-lg p-3 space-y-2 text-xs">
                                         <p className="font-semibold text-slate-700">日報フォーム:</p>
-                                        <p className="text-slate-500">フォームの「回答」タブ → スプレッドシートアイコン → 「既存のスプレッドシートを選択」→ 作成したシートを選択。<br/>シート名を<code className="bg-sise-50 text-sise-700 px-1.5 py-0.5 rounded font-bold">日報</code>に変更。</p>
+                                        <p className="text-slate-500">フォームの「回答」タブ → スプレッドシートアイコン → 「既存のスプレッドシートを選択」→ 作成したシートを選択。<br/>シート名を<code className="bg-dear-50 text-dear-700 px-1.5 py-0.5 rounded font-bold">日報</code>に変更。</p>
                                         <div className="border-t border-slate-200 pt-2 mt-2">
                                             <p className="font-semibold text-slate-700">カウンセリングフォーム（5店舗分）:</p>
                                             <p className="text-slate-500">各店舗のフォームも同様に同じスプレッドシートに接続し、シート名を以下に変更:</p>
                                             <div className="flex flex-wrap gap-1.5 mt-1.5">
                                                 {['カウンセリング回答_本厚木店', 'カウンセリング回答_大和店', 'カウンセリング回答_横浜店', 'カウンセリング回答_町田店', 'カウンセリング回答_川口店'].map(name => (
-                                                    <code key={name} className="bg-sise-50 text-sise-700 px-1.5 py-0.5 rounded font-bold">{name}</code>
+                                                    <code key={name} className="bg-dear-50 text-dear-700 px-1.5 py-0.5 rounded font-bold">{name}</code>
                                                 ))}
                                             </div>
                                         </div>
@@ -17115,19 +17115,19 @@
                                 </div>
 
                                 {/* Step 3 */}
-                                <div className="relative pl-8 border-l-2 border-sise-200 pb-5">
-                                    <div className="absolute left-0 -translate-x-1/2 w-7 h-7 rounded-full bg-gradient-to-br from-sise-500 to-sise-600 text-white flex items-center justify-center text-xs font-bold shadow-sm">3</div>
+                                <div className="relative pl-8 border-l-2 border-dear-200 pb-5">
+                                    <div className="absolute left-0 -translate-x-1/2 w-7 h-7 rounded-full bg-gradient-to-br from-dear-500 to-dear-600 text-white flex items-center justify-center text-xs font-bold shadow-sm">3</div>
                                     <h4 className="font-bold text-slate-800 mb-2">Apps Script にコードを貼り付け</h4>
                                     <ol className="text-sm text-slate-600 space-y-1.5 list-decimal list-inside">
                                         <li>スプレッドシートの<strong>「拡張機能」→「Apps Script」</strong>を開く</li>
-                                        <li>既存のコードをすべて削除し、<code className="bg-sise-50 text-sise-700 px-1.5 py-0.5 rounded font-bold">gas/unified.gs</code> の内容をすべて貼り付け</li>
+                                        <li>既存のコードをすべて削除し、<code className="bg-dear-50 text-dear-700 px-1.5 py-0.5 rounded font-bold">gas/unified.gs</code> の内容をすべて貼り付け</li>
                                         <li><strong>Ctrl+S（⌘+S）</strong>で保存</li>
                                     </ol>
                                 </div>
 
                                 {/* Step 4 */}
-                                <div className="relative pl-8 border-l-2 border-sise-200 pb-5">
-                                    <div className="absolute left-0 -translate-x-1/2 w-7 h-7 rounded-full bg-gradient-to-br from-sise-500 to-sise-600 text-white flex items-center justify-center text-xs font-bold shadow-sm">4</div>
+                                <div className="relative pl-8 border-l-2 border-dear-200 pb-5">
+                                    <div className="absolute left-0 -translate-x-1/2 w-7 h-7 rounded-full bg-gradient-to-br from-dear-500 to-dear-600 text-white flex items-center justify-center text-xs font-bold shadow-sm">4</div>
                                     <h4 className="font-bold text-slate-800 mb-2">ウェブアプリとしてデプロイ</h4>
                                     <ol className="text-sm text-slate-600 space-y-1.5 list-decimal list-inside">
                                         <li>Apps Script 画面右上の<strong>「デプロイ」→「新しいデプロイ」</strong></li>
@@ -17140,8 +17140,8 @@
                                 </div>
 
                                 {/* Step 5 */}
-                                <div className="relative pl-8 border-l-2 border-sise-200">
-                                    <div className="absolute left-0 -translate-x-1/2 w-7 h-7 rounded-full bg-gradient-to-br from-sise-500 to-sise-600 text-white flex items-center justify-center text-xs font-bold shadow-sm">5</div>
+                                <div className="relative pl-8 border-l-2 border-dear-200">
+                                    <div className="absolute left-0 -translate-x-1/2 w-7 h-7 rounded-full bg-gradient-to-br from-dear-500 to-dear-600 text-white flex items-center justify-center text-xs font-bold shadow-sm">5</div>
                                     <h4 className="font-bold text-slate-800 mb-2">URLを上の設定欄に貼り付け</h4>
                                     <p className="text-sm text-slate-600">デプロイ完了後に表示される<strong>ウェブアプリURL</strong>（https://script.google.com/macros/s/...）をコピーし、上の「統合 GAS URL」欄に貼り付けて保存してください。</p>
                                     <div className="mt-3 bg-amber-50 border border-amber-200 rounded-lg p-3">
@@ -17193,7 +17193,7 @@
                 const result = await verifyStaffPassword(access.staffId, password);
                 setChecking(false);
                 if (result.ok) {
-                    sessionStorage.setItem('sise_pw_verified', '1');
+                    sessionStorage.setItem('dear_pw_verified', '1');
                     onUnlock();
                 } else {
                     setError(result.reason || 'パスワードが正しくありません');
@@ -17242,7 +17242,7 @@
         // パスワードロック付きラッパー（HooksルールのためAppと分離）
         const AppWithAuth = () => {
             const [passwordVerified, setPasswordVerified] = useState(
-                !currentAccess || !currentAccess.hasPassword || sessionStorage.getItem('sise_pw_verified') === '1'
+                !currentAccess || !currentAccess.hasPassword || sessionStorage.getItem('dear_pw_verified') === '1'
             );
 
             // パスワードロック画面を表示（Appの前に判定し、Hooks順序を壊さない）
@@ -17440,11 +17440,11 @@
                             React.createElement('div', { className: 'flex gap-1 mb-4 p-1 bg-slate-100 rounded-2xl max-w-xs' },
                                 React.createElement('button', {
                                     onClick: () => setTreatmentSubTab('posture'),
-                                    className: `flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl text-sm font-bold transition-all ${treatmentSubTab === 'posture' ? 'bg-white text-sise-600 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`
+                                    className: `flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl text-sm font-bold transition-all ${treatmentSubTab === 'posture' ? 'bg-white text-dear-600 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`
                                 }, React.createElement(Icon, { name: 'scan', size: 15 }), '姿勢分析'),
                                 React.createElement('button', {
                                     onClick: () => setTreatmentSubTab('report'),
-                                    className: `flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl text-sm font-bold transition-all ${treatmentSubTab === 'report' ? 'bg-white text-sise-600 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`
+                                    className: `flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl text-sm font-bold transition-all ${treatmentSubTab === 'report' ? 'bg-white text-dear-600 shadow-sm' : 'text-slate-400 hover:text-slate-600'}`
                                 }, React.createElement(Icon, { name: 'file-heart', size: 15 }), 'レポート'),
                             ),
                             treatmentSubTab === 'posture'
@@ -17499,49 +17499,49 @@
                                 {isFullscreenView ? (
                                     <button
                                         onClick={() => setCurrentView('dashboard')}
-                                        className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-sise-100 border border-sise-300 hover:bg-sise-200 mr-1 transition-colors active:scale-90 shadow-sm"
+                                        className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-dear-100 border border-dear-300 hover:bg-dear-200 mr-1 transition-colors active:scale-90 shadow-sm"
                                     >
-                                        <Icon name="arrow-left" size={16} className="text-sise-700" />
-                                        <span className="text-sm font-medium text-sise-700">戻る</span>
+                                        <Icon name="arrow-left" size={16} className="text-dear-700" />
+                                        <span className="text-sm font-medium text-dear-700">戻る</span>
                                     </button>
                                 ) : (
                                     <button
                                         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                                        className="lg:hidden p-2.5 rounded-xl hover:bg-sise-50 mr-1 transition-colors active:scale-90"
+                                        className="lg:hidden p-2.5 rounded-xl hover:bg-dear-50 mr-1 transition-colors active:scale-90"
                                     >
                                     <Icon name={isSidebarOpen ? "x" : "menu"} size={20} />
                                 </button>
                                 )}
                                 <div className="flex items-center">
-                                    <div className="w-8 h-8 md:w-9 md:h-9 rounded-xl overflow-hidden shadow-lg shadow-sise-500/30 animate-glow-pulse flex-shrink-0">
+                                    <div className="w-8 h-8 md:w-9 md:h-9 rounded-xl overflow-hidden shadow-lg shadow-dear-500/30 animate-glow-pulse flex-shrink-0">
                                         <img
-                                            src="./images/logo.png"
-                                            alt="si'se"
+                                            src="./images/logo.svg"
+                                            alt="Dear"
                                             className="w-full h-full object-contain"
                                             onError={(e) => {
                                                 e.target.style.display = 'none';
-                                                e.target.parentElement.classList.add('bg-gradient-to-br', 'from-sise-400', 'to-sise-600', 'flex', 'items-center', 'justify-center');
+                                                e.target.parentElement.classList.add('bg-gradient-to-br', 'from-dear-400', 'to-dear-600', 'flex', 'items-center', 'justify-center');
                                                 e.target.parentElement.innerHTML = '<span class="text-white font-extrabold text-sm">S</span>';
                                             }}
                                         />
                                     </div>
                                     <div className="ml-2.5">
-                                        <h1 className="text-sm md:text-base font-extrabold tracking-wide gradient-text">si'se</h1>
-                                        <p className="text-[9px] text-sise-400 -mt-0.5 font-semibold tracking-[0.2em]">DASHBOARD</p>
+                                        <h1 className="text-sm md:text-base font-extrabold tracking-wide gradient-text">Dear</h1>
+                                        <p className="text-[9px] text-dear-400 -mt-0.5 font-semibold tracking-[0.2em]">DASHBOARD</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="flex items-center gap-1">
                                 {isFullscreenView ? (
-                                    <span className="text-xs font-semibold text-sise-500 px-3 py-1.5 bg-sise-50/80 border border-sise-200 rounded-xl">
+                                    <span className="text-xs font-semibold text-dear-500 px-3 py-1.5 bg-dear-50/80 border border-dear-200 rounded-xl">
                                         {currentView === 'counseling' ? 'カウンセリング中' : '施術レポート作成中'}
                                     </span>
                                 ) : null}
                                 {/* スタッフ表示 */}
                                 {!isFullscreenView && isStaffMode && (
-                                    <div className="flex items-center px-2 md:px-3 py-1.5 bg-sise-50/80 border border-sise-200 rounded-xl hide-mobile">
-                                        <Icon name={currentAccess.role === 'headquarter' ? 'building' : currentAccess.role === 'manager' ? 'shield' : 'user'} size={13} className="text-sise-500 mr-1" />
-                                        <span className="text-xs font-semibold text-sise-700">{currentAccess.name}</span>
+                                    <div className="flex items-center px-2 md:px-3 py-1.5 bg-dear-50/80 border border-dear-200 rounded-xl hide-mobile">
+                                        <Icon name={currentAccess.role === 'headquarter' ? 'building' : currentAccess.role === 'manager' ? 'shield' : 'user'} size={13} className="text-dear-500 mr-1" />
+                                        <span className="text-xs font-semibold text-dear-700">{currentAccess.name}</span>
                                     </div>
                                 )}
                                 {/* 以下はフルスクリーンビュー中は非表示 */}
@@ -17556,7 +17556,7 @@
                                                 <select
                                                     value={activeStoreId}
                                                     onChange={(e) => setActiveStoreId(e.target.value)}
-                                                    className="px-2 md:px-3 py-1.5 border border-sise-200 rounded-xl text-xs font-semibold focus:border-sise-400 focus:ring-2 focus:ring-sise-400/20 outline-none bg-sise-50/60 text-sise-700"
+                                                    className="px-2 md:px-3 py-1.5 border border-dear-200 rounded-xl text-xs font-semibold focus:border-dear-400 focus:ring-2 focus:ring-dear-400/20 outline-none bg-dear-50/60 text-dear-700"
                                                 >
                                                     <option value="all">全店舗</option>
                                                     {visibleStores.map(s => (
@@ -17572,7 +17572,7 @@
                                                 refreshReportData(); refreshSquareData();
                                                 showToast('データを更新中...', 'info', 2000);
                                             }}
-                                            className="p-2.5 rounded-xl hover:bg-sise-50 text-slate-400 hover:text-sise-600 transition-all active:scale-90"
+                                            className="p-2.5 rounded-xl hover:bg-dear-50 text-slate-400 hover:text-dear-600 transition-all active:scale-90"
                                             title="データ更新"
                                         >
                                             <Icon name="refresh-cw" size={18} />
@@ -17582,7 +17582,7 @@
                                                 setIsDarkMode(!isDarkMode);
                                                 showToast(isDarkMode ? 'ライトモードに切り替えました' : 'ダークモードに切り替えました', 'info', 1500);
                                             }}
-                                            className="p-2.5 rounded-xl hover:bg-sise-50 text-slate-400 hover:text-sise-600 transition-all active:scale-90 hide-mobile"
+                                            className="p-2.5 rounded-xl hover:bg-dear-50 text-slate-400 hover:text-dear-600 transition-all active:scale-90 hide-mobile"
                                             title="ダークモード切り替え"
                                         >
                                             <Icon name={isDarkMode ? 'sun' : 'moon'} size={18} />
@@ -17596,8 +17596,8 @@
                     {/* プルトゥリフレッシュ インジケーター */}
                     <div className={`pull-indicator ${pullState.pulling ? 'visible' : ''} ${pullState.refreshing ? 'refreshing' : ''}`}
                         style={pullState.pulling ? {transform: `translateX(-50%) translateY(${Math.min(pullState.distance * 0.3, 18)}px)`, opacity: Math.min(pullState.distance / 60, 1)} : undefined}>
-                        <div className={`w-9 h-9 rounded-full bg-white shadow-lg border border-sise-200 flex items-center justify-center ${pullState.refreshing ? 'animate-spin' : ''}`}>
-                            <Icon name={pullState.refreshing ? 'loader' : 'arrow-down'} size={16} className="text-sise-500"
+                        <div className={`w-9 h-9 rounded-full bg-white shadow-lg border border-dear-200 flex items-center justify-center ${pullState.refreshing ? 'animate-spin' : ''}`}>
+                            <Icon name={pullState.refreshing ? 'loader' : 'arrow-down'} size={16} className="text-dear-500"
                                 style={!pullState.refreshing ? {transform: `rotate(${Math.min(pullState.distance / 60 * 180, 180)}deg)`, transition: 'transform 0.1s'} : undefined} />
                         </div>
                     </div>
@@ -17623,8 +17623,8 @@
                                     }}
                                     className={`w-full flex items-center px-4 py-2.5 rounded-xl text-left text-sm font-semibold transition-all duration-200 ${
                                         currentView === item.id
-                                            ? 'bg-gradient-to-r from-sise-500 to-sise-600 text-white shadow-lg shadow-sise-500/25 scale-[1.02]'
-                                            : 'text-slate-500 hover:bg-sise-50 hover:text-sise-700 active:scale-[0.97]'
+                                            ? 'bg-gradient-to-r from-dear-500 to-dear-600 text-white shadow-lg shadow-dear-500/25 scale-[1.02]'
+                                            : 'text-slate-500 hover:bg-dear-50 hover:text-dear-700 active:scale-[0.97]'
                                     }`}
                                 >
                                     <Icon name={item.icon} size={18} className="mr-3" />
@@ -17636,7 +17636,7 @@
                         <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-slate-200/30">
                             {isStaffMode && (
                                 <div className="flex items-center mb-2 px-1">
-                                    <div className={`w-7 h-7 rounded-lg flex items-center justify-center ${currentAccess.role === 'headquarter' ? 'bg-violet-50 text-violet-500' : currentAccess.role === 'manager' ? 'bg-amber-50 text-amber-500' : 'bg-sise-50 text-sise-500'}`}>
+                                    <div className={`w-7 h-7 rounded-lg flex items-center justify-center ${currentAccess.role === 'headquarter' ? 'bg-violet-50 text-violet-500' : currentAccess.role === 'manager' ? 'bg-amber-50 text-amber-500' : 'bg-dear-50 text-dear-500'}`}>
                                         <Icon name={currentAccess.role === 'headquarter' ? 'building' : currentAccess.role === 'manager' ? 'shield' : 'user'} size={14} />
                                     </div>
                                     <div className="ml-2">
